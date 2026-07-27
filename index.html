@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>uResult - Gestão de Tráfego Pago | Aumente seu Faturamento</title>
-    <meta name="description" content="Ajudamos sua empresa a faturar mais através dos anúncios online. Mais de 50 empresas atendidas com resultados comprovados.">
+    <title>uResult - Gestão de Tráfego Pago que Multiplica Seu Faturamento</title>
+    <meta name="description" content="Transforme seu negócio com estratégias de tráfego pago comprovadas. Mais de 50 empresas atendidas, resultados reais e mensuráveis.">
     
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     
     <style>
         * {
@@ -16,10 +16,10 @@
         }
         
         body {
-            font-family: 'Inter', sans-serif;
-            background: #FFFFFF;
-            color: #1A1A1A;
-            line-height: 1.6;
+            font-family: 'Poppins', sans-serif;
+            background: #000000;
+            color: #FFFFFF;
+            overflow-x: hidden;
         }
         
         .container {
@@ -28,531 +28,870 @@
             padding: 0 20px;
         }
         
+        /* HEADER */
         header {
-            padding: 30px 0;
-            background: #FFFFFF;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-            position: sticky;
+            background: rgba(0, 0, 0, 0.95);
+            padding: 20px 0;
+            position: fixed;
+            width: 100%;
             top: 0;
             z-index: 1000;
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(0, 71, 171, 0.3);
         }
         
         .header-content {
             display: flex;
-            flex-direction: column;
+            justify-content: space-between;
             align-items: center;
-            text-align: center;
         }
         
-        .logo-text {
-            font-size: 36px;
-            font-weight: 800;
+        .logo-section {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .logo {
+            font-size: 32px;
+            font-weight: 900;
             color: #0047AB;
-            margin-bottom: 5px;
+            letter-spacing: -1px;
         }
         
-        .tagline {
-            font-size: 14px;
-            color: #666666;
+        .logo-subtitle {
+            font-size: 11px;
+            color: #888;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-top: -5px;
+        }
+        
+        .header-cta {
+            background: linear-gradient(135deg, #0047AB 0%, #0066FF 100%);
+            color: #FFFFFF;
+            padding: 12px 30px;
+            border-radius: 50px;
+            text-decoration: none;
             font-weight: 600;
+            font-size: 14px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 71, 171, 0.4);
+        }
+        
+        .header-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 71, 171, 0.6);
+        }
+        
+        /* HERO */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            background: linear-gradient(135deg, #000000 0%, #0a0a0a 100%);
+            padding: 120px 0 60px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(0, 71, 171, 0.15) 0%, transparent 70%);
+            top: -200px;
+            right: -200px;
+            border-radius: 50%;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+        
+        .hero-tag {
+            display: inline-block;
+            background: rgba(0, 71, 171, 0.2);
+            border: 1px solid rgba(0, 71, 171, 0.4);
+            padding: 8px 20px;
+            border-radius: 50px;
+            font-size: 13px;
+            font-weight: 600;
+            color: #0047AB;
+            margin-bottom: 30px;
             text-transform: uppercase;
             letter-spacing: 1px;
         }
         
-        .hero {
-            background: linear-gradient(135deg, #0047AB 0%, #002866 100%);
-            padding: 100px 0;
-            text-align: center;
-            color: #FFFFFF;
-        }
-        
         .hero h1 {
-            font-size: 48px;
-            font-weight: 800;
-            line-height: 1.2;
+            font-size: 64px;
+            font-weight: 900;
+            line-height: 1.1;
             margin-bottom: 30px;
-            max-width: 900px;
-            margin-left: auto;
-            margin-right: auto;
+            background: linear-gradient(135deg, #FFFFFF 0%, #0047AB 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
         
-        .hero .subtitle {
-            font-size: 20px;
+        .hero-subtitle {
+            font-size: 22px;
+            color: #BBBBBB;
             line-height: 1.6;
-            max-width: 800px;
-            margin: 0 auto 40px;
+            max-width: 700px;
+            margin-bottom: 40px;
         }
         
-        .cta-button {
-            display: inline-block;
-            background: #FFFFFF;
-            color: #0047AB;
-            padding: 20px 50px;
-            font-size: 18px;
-            font-weight: 700;
-            text-decoration: none;
+        .hero-ctas {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, #0047AB 0%, #0066FF 100%);
+            color: #FFFFFF;
+            padding: 18px 45px;
             border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 16px;
+            display: inline-block;
             transition: all 0.3s ease;
+            box-shadow: 0 8px 25px rgba(0, 71, 171, 0.4);
             border: none;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
             cursor: pointer;
         }
         
-        .cta-button:hover {
+        .btn-primary:hover {
             transform: translateY(-3px);
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 12px 35px rgba(0, 71, 171, 0.6);
         }
         
-        .social-proof {
-            background: #F8F9FA;
-            padding: 60px 0;
+        .btn-secondary {
+            background: transparent;
+            color: #FFFFFF;
+            padding: 18px 45px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 16px;
+            display: inline-block;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            transition: all 0.3s ease;
+        }
+        
+        .btn-secondary:hover {
+            border-color: #0047AB;
+            background: rgba(0, 71, 171, 0.1);
+        }
+        
+        /* SOCIAL PROOF BAR */
+        .social-proof-bar {
+            background: #0a0a0a;
+            padding: 40px 0;
+            border-top: 1px solid #1a1a1a;
+            border-bottom: 1px solid #1a1a1a;
+        }
+        
+        .proof-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
             text-align: center;
         }
         
-        .platforms {
+        .proof-item h3 {
+            font-size: 48px;
+            font-weight: 900;
+            color: #0047AB;
+            margin-bottom: 10px;
+        }
+        
+        .proof-item p {
+            font-size: 14px;
+            color: #888;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        /* PLATFORMS */
+        .platforms-section {
+            padding: 80px 0;
+            background: #000000;
+            text-align: center;
+        }
+        
+        .platforms-logos {
             display: flex;
             justify-content: center;
             align-items: center;
             gap: 60px;
-            margin-bottom: 40px;
+            margin-top: 50px;
             flex-wrap: wrap;
         }
         
-        .platform-logo {
+        .platform-logo-item {
+            width: 120px;
+            height: 120px;
+            background: #0a0a0a;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             font-size: 48px;
+            transition: all 0.3s ease;
+            border: 1px solid #1a1a1a;
         }
         
-        .companies-served {
-            font-size: 24px;
-            color: #0047AB;
-            font-weight: 700;
+        .platform-logo-item:hover {
+            transform: translateY(-10px);
+            border-color: #0047AB;
+            box-shadow: 0 10px 30px rgba(0, 71, 171, 0.3);
         }
         
+        /* SECTION TITLE */
         .section-title {
-            font-size: 36px;
-            font-weight: 800;
+            font-size: 48px;
+            font-weight: 900;
             text-align: center;
             margin-bottom: 20px;
-            color: #0047AB;
+            line-height: 1.2;
         }
         
         .section-subtitle {
             font-size: 18px;
+            color: #888;
             text-align: center;
-            color: #666666;
             max-width: 700px;
-            margin: 0 auto 50px;
-            line-height: 1.8;
+            margin: 0 auto 60px;
+            line-height: 1.6;
         }
         
-        .why-advertise {
-            padding: 80px 0;
+        /* CONTENT BLOCKS */
+        .content-section {
+            padding: 100px 0;
+            background: #0a0a0a;
+        }
+        
+        .content-blocks {
+            display: grid;
+            gap: 30px;
+            max-width: 900px;
+            margin: 0 auto;
         }
         
         .content-block {
-            max-width: 900px;
-            margin: 0 auto 40px;
-            background: #F8F9FA;
-            padding: 40px;
-            border-radius: 12px;
-            border-left: 5px solid #0047AB;
-        }
-        
-        .content-block h3 {
-            font-size: 24px;
-            color: #0047AB;
-            margin-bottom: 20px;
-            font-weight: 700;
-        }
-        
-        .content-block p {
-            font-size: 18px;
-            line-height: 1.8;
-            color: #333333;
-            margin-bottom: 15px;
-        }
-        
-        .strategies {
-            padding: 80px 0;
-            background: linear-gradient(135deg, #0047AB 0%, #002866 100%);
-            color: #FFFFFF;
-        }
-        
-        .strategies .section-title {
-            color: #FFFFFF;
-        }
-        
-        .strategies .section-subtitle {
-            color: rgba(255, 255, 255, 0.9);
-        }
-        
-        .strategy-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            margin-top: 50px;
-        }
-        
-        .strategy-card {
-            background: rgba(255, 255, 255, 0.1);
-            padding: 40px;
-            border-radius: 12px;
-            border: 1px solid rgba(255, 255, 255, 0.2);
+            background: linear-gradient(135deg, #0a0a0a 0%, #000000 100%);
+            padding: 50px;
+            border-radius: 20px;
+            border: 1px solid #1a1a1a;
             transition: all 0.3s ease;
         }
         
-        .strategy-card:hover {
+        .content-block:hover {
+            border-color: #0047AB;
             transform: translateY(-5px);
-            background: rgba(255, 255, 255, 0.15);
+        }
+        
+        .content-block h3 {
+            font-size: 28px;
+            font-weight: 700;
+            color: #0047AB;
+            margin-bottom: 20px;
+        }
+        
+        .content-block p {
+            font-size: 16px;
+            color: #BBBBBB;
+            line-height: 1.8;
+            margin-bottom: 15px;
+        }
+        
+        /* STRATEGIES */
+        .strategies-section {
+            padding: 100px 0;
+            background: #000000;
+        }
+        
+        .strategies-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+            margin-top: 60px;
+        }
+        
+        .strategy-card {
+            background: #0a0a0a;
+            padding: 50px;
+            border-radius: 20px;
+            border: 1px solid #1a1a1a;
+            text-align: center;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .strategy-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, #0047AB 0%, #0066FF 100%);
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+        
+        .strategy-card:hover::before {
+            transform: scaleX(1);
+        }
+        
+        .strategy-card:hover {
+            transform: translateY(-10px);
+            border-color: #0047AB;
+            box-shadow: 0 20px 40px rgba(0, 71, 171, 0.2);
         }
         
         .strategy-icon {
-            font-size: 48px;
-            margin-bottom: 20px;
+            font-size: 64px;
+            margin-bottom: 30px;
         }
         
         .strategy-card h3 {
             font-size: 24px;
-            margin-bottom: 15px;
             font-weight: 700;
-        }
-        
-        .strategy-card p {
-            font-size: 16px;
-            line-height: 1.6;
-        }
-        
-        .cta-section {
-            text-align: center;
-            margin: 50px 0;
-        }
-        
-        .how-it-works {
-            padding: 80px 0;
-            background: #F8F9FA;
-        }
-        
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
-            margin-top: 50px;
-        }
-        
-        .service-card {
-            background: #FFFFFF;
-            padding: 40px;
-            border-radius: 12px;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
-            transition: all 0.3s ease;
-        }
-        
-        .service-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(0, 71, 171, 0.15);
-        }
-        
-        .service-icon {
-            font-size: 40px;
             margin-bottom: 20px;
         }
         
-        .service-card h3 {
-            font-size: 20px;
-            color: #0047AB;
-            margin-bottom: 15px;
-            font-weight: 700;
-        }
-        
-        .service-card p {
-            font-size: 16px;
-            color: #666666;
+        .strategy-card p {
+            font-size: 15px;
+            color: #888;
             line-height: 1.6;
         }
         
-        .why-uresult {
-            padding: 80px 0;
+        /* PROCESS */
+        .process-section {
+            padding: 100px 0;
+            background: #0a0a0a;
+        }
+        
+        .process-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 40px;
+            margin-top: 60px;
+        }
+        
+        .process-card {
+            background: #000000;
+            padding: 40px;
+            border-radius: 20px;
+            border: 1px solid #1a1a1a;
+            position: relative;
+        }
+        
+        .process-number {
+            position: absolute;
+            top: -20px;
+            left: 30px;
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, #0047AB 0%, #0066FF 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            font-weight: 900;
+            box-shadow: 0 5px 20px rgba(0, 71, 171, 0.4);
+        }
+        
+        .process-card h4 {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 15px;
+            margin-top: 20px;
+        }
+        
+        .process-card p {
+            font-size: 14px;
+            color: #888;
+            line-height: 1.6;
+        }
+        
+        /* CREDENTIALS */
+        .credentials-section {
+            padding: 100px 0;
+            background: #000000;
         }
         
         .credentials-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 30px;
-            margin-top: 50px;
+            margin-top: 60px;
         }
         
-        .credential-card {
+        .credential-item {
+            background: #0a0a0a;
+            padding: 40px;
+            border-radius: 20px;
+            border: 1px solid #1a1a1a;
             text-align: center;
-            padding: 30px;
-            background: #F8F9FA;
-            border-radius: 12px;
+            transition: all 0.3s ease;
+        }
+        
+        .credential-item:hover {
+            transform: translateY(-5px);
+            border-color: #0047AB;
         }
         
         .credential-icon {
             font-size: 48px;
-            margin-bottom: 15px;
+            margin-bottom: 20px;
         }
         
-        .credential-card h4 {
+        .credential-item h4 {
             font-size: 18px;
+            font-weight: 700;
             color: #0047AB;
             margin-bottom: 10px;
-            font-weight: 700;
         }
         
-        .credential-card p {
-            font-size: 14px;
-            color: #666666;
+        .credential-item p {
+            font-size: 13px;
+            color: #888;
+            line-height: 1.6;
         }
         
-        .about {
-            padding: 80px 0;
-            background: linear-gradient(135deg, #0047AB 0%, #002866 100%);
-            color: #FFFFFF;
+        /* ABOUT */
+        .about-section {
+            padding: 100px 0;
+            background: #0a0a0a;
         }
         
-        .about .section-title {
-            color: #FFFFFF;
-        }
-        
-        .about-content {
+        .about-grid {
             display: grid;
             grid-template-columns: 1fr 2fr;
-            gap: 60px;
+            gap: 80px;
             align-items: center;
-            max-width: 1000px;
-            margin: 50px auto 0;
+            margin-top: 60px;
         }
         
         .about-image {
             width: 100%;
-            max-width: 300px;
-            border-radius: 12px;
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 71, 171, 0.3);
         }
         
-        .about-text h3 {
-            font-size: 28px;
+        .about-content h3 {
+            font-size: 36px;
+            font-weight: 900;
             margin-bottom: 20px;
-            font-weight: 700;
         }
         
-        .about-text p {
+        .about-content p {
             font-size: 16px;
-            margin-bottom: 20px;
+            color: #BBBBBB;
             line-height: 1.8;
+            margin-bottom: 20px;
         }
         
-        .about-highlight {
-            background: rgba(255, 255, 255, 0.1);
-            padding: 20px;
-            border-radius: 8px;
-            border-left: 4px solid #FFFFFF;
-            margin: 20px 0;
+        .highlight-box {
+            background: linear-gradient(135deg, rgba(0, 71, 171, 0.1) 0%, rgba(0, 102, 255, 0.05) 100%);
+            border-left: 4px solid #0047AB;
+            padding: 25px;
+            border-radius: 10px;
+            margin: 25px 0;
         }
         
-        .testimonials {
-            padding: 80px 0;
-            background: #F8F9FA;
+        .highlight-box strong {
+            color: #0047AB;
+            font-size: 18px;
+        }
+        
+        /* TESTIMONIALS */
+        .testimonials-section {
+            padding: 100px 0;
+            background: #000000;
         }
         
         .testimonials-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
             gap: 30px;
-            margin-top: 50px;
+            margin-top: 60px;
         }
         
         .testimonial-card {
-            background: #FFFFFF;
-            padding: 30px;
-            border-radius: 12px;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+            background: #0a0a0a;
+            padding: 40px;
+            border-radius: 20px;
+            border: 1px solid #1a1a1a;
+            transition: all 0.3s ease;
+        }
+        
+        .testimonial-card:hover {
+            transform: translateY(-10px);
+            border-color: #0047AB;
+            box-shadow: 0 20px 40px rgba(0, 71, 171, 0.2);
         }
         
         .testimonial-header {
             display: flex;
             align-items: center;
-            margin-bottom: 20px;
+            margin-bottom: 25px;
         }
         
         .testimonial-avatar {
-            width: 50px;
-            height: 50px;
+            width: 60px;
+            height: 60px;
             border-radius: 50%;
-            background: #0047AB;
+            background: linear-gradient(135deg, #0047AB 0%, #0066FF 100%);
             display: flex;
             align-items: center;
             justify-content: center;
-            font-weight: 800;
-            font-size: 18px;
-            color: #FFFFFF;
-            margin-right: 15px;
+            font-weight: 900;
+            font-size: 20px;
+            margin-right: 20px;
         }
         
-        .testimonial-info h4 {
+        .testimonial-info h5 {
             font-size: 16px;
-            color: #0047AB;
-            margin-bottom: 5px;
             font-weight: 700;
+            margin-bottom: 5px;
         }
         
         .testimonial-info p {
             font-size: 13px;
-            color: #666666;
+            color: #888;
         }
         
         .testimonial-text {
             font-size: 15px;
+            color: #BBBBBB;
             line-height: 1.6;
-            color: #333333;
-            margin-bottom: 20px;
+            margin-bottom: 25px;
             font-style: italic;
         }
         
         .testimonial-result {
-            background: #F8F9FA;
-            padding: 15px;
-            border-radius: 8px;
+            background: rgba(0, 71, 171, 0.1);
             border-left: 4px solid #0047AB;
+            padding: 20px;
+            border-radius: 10px;
         }
         
         .testimonial-result strong {
             color: #0047AB;
-            font-size: 16px;
+            font-size: 18px;
+            display: block;
+            margin-bottom: 5px;
         }
         
+        /* FAQ */
+        .faq-section {
+            padding: 100px 0;
+            background: #0a0a0a;
+        }
+        
+        .faq-list {
+            max-width: 900px;
+            margin: 60px auto 0;
+        }
+        
+        .faq-item {
+            background: #000000;
+            padding: 35px;
+            margin-bottom: 20px;
+            border-radius: 15px;
+            border: 1px solid #1a1a1a;
+            transition: all 0.3s ease;
+        }
+        
+        .faq-item:hover {
+            border-color: #0047AB;
+        }
+        
+        .faq-question {
+            font-size: 18px;
+            font-weight: 700;
+            color: #FFFFFF;
+            margin-bottom: 15px;
+        }
+        
+        .faq-answer {
+            font-size: 15px;
+            color: #888;
+            line-height: 1.8;
+        }
+        
+        /* FORM SECTION */
+        .form-section {
+            padding: 100px 0;
+            background: linear-gradient(135deg, #000000 0%, #0a0a0a 100%);
+            position: relative;
+        }
+        
+        .form-container {
+            max-width: 700px;
+            margin: 60px auto 0;
+            background: #0a0a0a;
+            padding: 60px;
+            border-radius: 20px;
+            border: 1px solid #1a1a1a;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+        }
+        
+        .form-group {
+            margin-bottom: 25px;
+        }
+        
+        .form-group label {
+            display: block;
+            font-size: 14px;
+            font-weight: 600;
+            color: #FFFFFF;
+            margin-bottom: 10px;
+        }
+        
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 18px;
+            background: #000000;
+            border: 1px solid #1a1a1a;
+            border-radius: 10px;
+            color: #FFFFFF;
+            font-size: 15px;
+            font-family: 'Poppins', sans-serif;
+            transition: all 0.3s ease;
+        }
+        
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #0047AB;
+            box-shadow: 0 0 0 3px rgba(0, 71, 171, 0.1);
+        }
+        
+        .form-group textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+        
+        /* FOOTER */
+        footer {
+            background: #000000;
+            padding: 60px 0 30px;
+            border-top: 1px solid #1a1a1a;
+        }
+        
+        .footer-content {
+            text-align: center;
+        }
+        
+        .footer-logo {
+            font-size: 32px;
+            font-weight: 900;
+            color: #0047AB;
+            margin-bottom: 20px;
+        }
+        
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+        
+        .footer-links a {
+            color: #888;
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-links a:hover {
+            color: #0047AB;
+        }
+        
+        .footer-copy {
+            font-size: 13px;
+            color: #555;
+        }
+        
+        /* WHATSAPP FLOAT */
         .whatsapp-float {
             position: fixed;
-            width: 60px;
-            height: 60px;
-            bottom: 40px;
-            right: 40px;
-            background-color: #25d366;
-            color: #FFF;
-            border-radius: 50px;
-            text-align: center;
-            font-size: 30px;
-            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
-            z-index: 100;
+            bottom: 30px;
+            right: 30px;
+            width: 65px;
+            height: 65px;
+            background: #25D366;
+            border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
+            font-size: 32px;
+            box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4);
+            z-index: 1000;
+            transition: all 0.3s ease;
             text-decoration: none;
-            transition: transform 0.3s ease;
         }
         
         .whatsapp-float:hover {
             transform: scale(1.1);
+            box-shadow: 0 12px 35px rgba(37, 211, 102, 0.6);
         }
         
+        /* CTA SECTION */
+        .cta-section {
+            text-align: center;
+            margin-top: 60px;
+        }
+        
+        /* RESPONSIVE */
         @media (max-width: 768px) {
             .hero h1 {
-                font-size: 32px;
+                font-size: 36px;
             }
             
             .section-title {
-                font-size: 28px;
+                font-size: 32px;
             }
             
-            .about-content {
+            .about-grid {
                 grid-template-columns: 1fr;
             }
             
-            .whatsapp-float {
-                bottom: 20px;
-                right: 20px;
-                width: 50px;
-                height: 50px;
-                font-size: 24px;
+            .header-cta {
+                display: none;
+            }
+            
+            .hero-ctas {
+                flex-direction: column;
+            }
+            
+            .form-container {
+                padding: 40px 25px;
             }
         }
     </style>
 </head>
 <body>
 
+    <!-- HEADER -->
     <header>
         <div class="container">
             <div class="header-content">
-                <div class="logo-text">uResult</div>
-                <div class="tagline">Gestão de Tráfego Pago</div>
+                <div class="logo-section">
+                    <div class="logo">uResult</div>
+                    <div class="logo-subtitle">Gestão de Tráfego Pago</div>
+                </div>
+                <a href="#form" class="header-cta">FALAR COM ESPECIALISTA</a>
             </div>
         </div>
     </header>
 
+    <!-- HERO -->
     <section class="hero">
         <div class="container">
-            <h1>Ajudamos sua empresa a faturar mais através dos anúncios online</h1>
-            <p class="subtitle">
-                O método comprovado que já ajudou +50 empresas a aumentarem seu faturamento com estratégias validadas de tráfego pago.
-                <br><br>
-                Clique no botão abaixo e descubra como podemos aumentar o faturamento da sua empresa assim como já fizemos com nossos parceiros de negócios!
-            </p>
-            <a href="#form" class="cta-button">QUERO AUMENTAR MINHAS VENDAS</a>
-        </div>
-    </section>
-
-    <section class="social-proof">
-        <div class="container">
-            <div class="platforms">
-                <div class="platform-logo">🔍</div>
-                <div class="platform-logo">📘</div>
-                <div class="platform-logo">📸</div>
+            <div class="hero-content">
+                <span class="hero-tag">✨ Resultados Comprovados</span>
+                <h1>Ajudamos sua empresa a faturar mais através dos anúncios online</h1>
+                <p class="hero-subtitle">
+                    O método comprovado que já ajudou +50 empresas a aumentarem seu faturamento em até 300% com estratégias validadas de tráfego pago no Google, Facebook e Instagram.
+                </p>
+                <div class="hero-ctas">
+                    <a href="#form" class="btn-primary">QUERO AUMENTAR MINHAS VENDAS</a>
+                    <a href="#resultados" class="btn-secondary">VER RESULTADOS</a>
+                </div>
             </div>
-            <p class="companies-served">✅ Mais de 50 Empresas Atendidas</p>
         </div>
     </section>
 
-    <section class="why-advertise">
+    <!-- SOCIAL PROOF BAR -->
+    <section class="social-proof-bar">
+        <div class="container">
+            <div class="proof-grid">
+                <div class="proof-item">
+                    <h3>50+</h3>
+                    <p>Empresas Atendidas</p>
+                </div>
+                <div class="proof-item">
+                    <h3>300%</h3>
+                    <p>Aumento Médio em Vendas</p>
+                </div>
+                <div class="proof-item">
+                    <h3>R\$3,1M</h3>
+                    <p>Gerado para Clientes</p>
+                </div>
+                <div class="proof-item">
+                    <h3>4+</h3>
+                    <p>Anos de Experiência</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PLATFORMS -->
+    <section class="platforms-section">
+        <div class="container">
+            <h2 class="section-title">Anunciamos nas Maiores Plataformas do Mundo</h2>
+            <p class="section-subtitle">Estratégias validadas para Google Ads, Facebook Ads e Instagram Ads</p>
+            <div class="platforms-logos">
+                <div class="platform-logo-item">🔍</div>
+                <div class="platform-logo-item">📘</div>
+                <div class="platform-logo-item">📸</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTENT SECTION -->
+    <section class="content-section">
         <div class="container">
             <h2 class="section-title">Utilizamos nossas estratégias para te trazer resultados</h2>
+            <p class="section-subtitle">Se você não está bem posicionado nas redes sociais e Google, está deixando dinheiro na mesa</p>
             
-            <div class="content-block">
-                <h3>Esteja na avenida mais movimentada do mundo</h3>
-                <p>
-                    Se você não está bem posicionado na avenida mais movimentada do mundo que são as redes sociais e redes de pesquisa - Instagram, Google e Facebook - você está deixando muito dinheiro na mesa.
-                </p>
-                <p>
-                    Fique disponível para seu cliente sempre que ele procurar pelo seu produto/serviço nos maiores canais de vendas do mundo e venda mais!
-                </p>
-            </div>
+            <div class="content-blocks">
+                <div class="content-block">
+                    <h3>🌐 Esteja na avenida mais movimentada do mundo</h3>
+                    <p>Se você não está bem posicionado na avenida mais movimentada do mundo - Instagram, Google e Facebook - você está deixando muito dinheiro na mesa.</p>
+                    <p>Fique disponível para seu cliente sempre que ele procurar pelo seu produto/serviço nos maiores canais de vendas do mundo e venda mais!</p>
+                </div>
 
-            <div class="content-block">
-                <h3>Seu cliente está te procurando no Google</h3>
-                <p>
-                    Quando você quer comprar algum tipo de produto ou serviço, você utiliza o Google. Seu cliente também faz isso!
-                </p>
-                <p>
-                    <strong>Quando você pesquisa sobre o que você vende, você aparece no topo?</strong>
-                </p>
-            </div>
+                <div class="content-block">
+                    <h3>🔍 Seu cliente está te procurando no Google</h3>
+                    <p>Quando você quer comprar algum tipo de produto ou serviço, você utiliza o Google. Seu cliente também faz isso!</p>
+                    <p><strong>Quando você pesquisa sobre o que você vende, você aparece no topo?</strong></p>
+                </div>
 
-            <div class="content-block">
-                <h3>Autoridade e reconhecimento nas redes sociais</h3>
-                <p>
-                    Antes do seu cliente estar no momento de compra, ele precisa saber que você é autoridade e referência no que você faz ou vende.
-                </p>
-                <p>
-                    Como fazer isso? Aparecendo para ele com frequência, com bons conteúdos e resultados reais. É onde entra o Instagram e Facebook para gerar esse reconhecimento.
-                </p>
+                <div class="content-block">
+                    <h3>⭐ Autoridade e reconhecimento nas redes sociais</h3>
+                    <p>Antes do seu cliente estar no momento de compra, ele precisa saber que você é autoridade e referência no que você faz ou vende.</p>
+                    <p>Como fazer isso? Aparecendo para ele com frequência, com bons conteúdos e resultados reais através do Instagram e Facebook.</p>
+                </div>
             </div>
 
             <div class="cta-section">
-                <a href="#form" class="cta-button">QUERO APARECER PARA MEU PÚBLICO</a>
+                <a href="#form" class="btn-primary">QUERO APARECER PARA MEU PÚBLICO</a>
             </div>
         </div>
     </section>
 
-    <section class="strategies">
+    <!-- STRATEGIES -->
+    <section class="strategies-section">
         <div class="container">
-            <h2 class="section-title">Apareça para as pessoas que querem comprar o seu produto ou serviço</h2>
-            <p class="section-subtitle">
-                Você já percebeu que as pessoas estão o tempo todo no celular? Se as pessoas passam a maior parte do seu dia no celular, nas redes sociais, você acredita que seu público comprador também está lá?
-                <br><br>
-                <strong>Com os anúncios online você tem o super poder de aparecer exatamente para seu público comprador.</strong>
-            </p>
+            <h2 class="section-title">Apareça exatamente para seu público comprador</h2>
+            <p class="section-subtitle">Com os anúncios online você tem o super poder de aparecer exatamente para quem quer comprar de você</p>
             
-            <div class="strategy-grid">
+            <div class="strategies-grid">
                 <div class="strategy-card">
                     <div class="strategy-icon">🔍</div>
                     <h3>Google Ads</h3>
@@ -573,125 +912,121 @@
             </div>
 
             <div class="cta-section">
-                <a href="#form" class="cta-button">QUERO COMEÇAR AGORA</a>
+                <a href="#form" class="btn-primary">QUERO COMEÇAR AGORA</a>
             </div>
         </div>
     </section>
-<section class="how-it-works">
+
+    <!-- PROCESS -->
+    <section class="process-section">
         <div class="container">
-            <h2 class="section-title">Como Funciona Nosso Trabalho</h2>
-            <p class="section-subtitle">
-                Um processo estruturado e comprovado para trazer resultados consistentes para sua empresa
-            </p>
+            <h2 class="section-title">Como Funciona Nosso Processo</h2>
+            <p class="section-subtitle">Um método estruturado e comprovado para trazer resultados consistentes</p>
             
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-icon">🎯</div>
-                    <h3>Planejamento Estratégico</h3>
+            <div class="process-grid">
+                <div class="process-card">
+                    <div class="process-number">1</div>
+                    <h4>Planejamento Estratégico</h4>
                     <p>Análise profunda do seu negócio, público-alvo e concorrência para criar estratégias personalizadas.</p>
                 </div>
                 
-                <div class="service-card">
-                    <div class="service-icon">🎨</div>
-                    <h3>Criação de Campanhas</h3>
+                <div class="process-card">
+                    <div class="process-number">2</div>
+                    <h4>Criação de Campanhas</h4>
                     <p>Desenvolvimento de anúncios persuasivos e criativos que convertem visualizações em clientes.</p>
                 </div>
                 
-                <div class="service-card">
-                    <div class="service-icon">🚀</div>
-                    <h3>Lançamento e Otimização</h3>
-                    <p>Implementação das campanhas com acompanhamento diário e ajustes para maximizar resultados.</p>
+                <div class="process-card">
+                    <div class="process-number">3</div>
+                    <h4>Lançamento e Otimização</h4>
+                    <p>Implementação com acompanhamento diário e ajustes para maximizar resultados.</p>
                 </div>
                 
-                <div class="service-card">
-                    <div class="service-icon">📊</div>
-                    <h3>Análise de Dados</h3>
-                    <p>Monitoramento constante de métricas e KPIs para tomar decisões baseadas em dados reais.</p>
+                <div class="process-card">
+                    <div class="process-number">4</div>
+                    <h4>Análise de Dados</h4>
+                    <p>Monitoramento constante de métricas e KPIs para decisões baseadas em dados reais.</p>
                 </div>
                 
-                <div class="service-card">
-                    <div class="service-icon">📈</div>
-                    <h3>Escala de Resultados</h3>
-                    <p>Após validação, escalamos os investimentos para multiplicar seus resultados de forma previsível.</p>
+                <div class="process-card">
+                    <div class="process-number">5</div>
+                    <h4>Escala de Resultados</h4>
+                    <p>Após validação, escalamos os investimentos para multiplicar seus resultados.</p>
                 </div>
                 
-                <div class="service-card">
-                    <div class="service-icon">💬</div>
-                    <h3>Relatórios Transparentes</h3>
-                    <p>Relatórios detalhados mensais mostrando exatamente onde seu investimento está gerando retorno.</p>
+                <div class="process-card">
+                    <div class="process-number">6</div>
+                    <h4>Relatórios Transparentes</h4>
+                    <p>Relatórios detalhados mensais mostrando onde seu investimento gera retorno.</p>
                 </div>
-            </div>
-
-            <div class="cta-section">
-                <a href="#form" class="cta-button">QUERO CONHECER A ESTRATÉGIA</a>
             </div>
         </div>
     </section>
 
-    <section class="why-uresult">
+    <!-- CREDENTIALS -->
+    <section class="credentials-section">
         <div class="container">
             <h2 class="section-title">Por Que Escolher a uResult?</h2>
-            <p class="section-subtitle">
-                Experiência, metodologia e resultados comprovados que fazem a diferença
-            </p>
+            <p class="section-subtitle">Experiência, metodologia e resultados comprovados que fazem a diferença</p>
             
             <div class="credentials-grid">
-                <div class="credential-card">
+                <div class="credential-item">
                     <div class="credential-icon">⏱️</div>
                     <h4>+4 Anos de Experiência</h4>
-                    <p>Experiência sólida no mercado de tráfego pago com centenas de campanhas gerenciadas</p>
+                    <p>Experiência sólida com centenas de campanhas gerenciadas</p>
                 </div>
                 
-                <div class="credential-card">
+                <div class="credential-item">
                     <div class="credential-icon">✅</div>
                     <h4>+50 Empresas Atendidas</h4>
-                    <p>Dezenas de empresas já confiaram em nosso trabalho e obtiveram resultados reais</p>
+                    <p>Dezenas de empresas já obtiveram resultados reais</p>
                 </div>
                 
-                <div class="credential-card">
+                <div class="credential-item">
                     <div class="credential-icon">🎓</div>
-                    <h4>Certificações Google & Meta</h4>
-                    <p>Certificados oficiais nas principais plataformas de anúncios online</p>
+                    <h4>Certificações Oficiais</h4>
+                    <p>Google Ads & Meta Ads certificados</p>
                 </div>
                 
-                <div class="credential-card">
+                <div class="credential-item">
                     <div class="credential-icon">🎯</div>
                     <h4>Metodologia Própria</h4>
-                    <p>Sistema validado e testado que traz previsibilidade aos resultados</p>
+                    <p>Sistema validado e testado</p>
                 </div>
                 
-                <div class="credential-card">
+                <div class="credential-item">
                     <div class="credential-icon">👤</div>
                     <h4>Atendimento Personalizado</h4>
-                    <p>Cada empresa é única e merece estratégias personalizadas para seu mercado</p>
+                    <p>Estratégias únicas para cada empresa</p>
                 </div>
                 
-                <div class="credential-card">
+                <div class="credential-item">
                     <div class="credential-icon">📊</div>
                     <h4>Foco em ROI</h4>
-                    <p>Nosso objetivo é simples: fazer seu investimento gerar mais dinheiro do que custou</p>
+                    <p>Fazer seu investimento gerar mais dinheiro</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="about">
+    <!-- ABOUT -->
+    <section class="about-section">
         <div class="container">
             <h2 class="section-title">Quem Está Por Trás da uResult</h2>
-            <div class="about-content">
-                <div class="about-image-container">
-                    <img src="sua-foto.jpg" alt="Otavio Andrade - Fundador uResult" class="about-image">
+            <div class="about-grid">
+                <div>
+                    <img src="sua-foto.jpg" alt="Otavio Andrade" class="about-image">
                 </div>
-                <div class="about-text">
+                <div class="about-content">
                     <h3>Otavio Andrade</h3>
                     <p>Fundador da uResult e especialista em tráfego pago e estratégias de vendas online.</p>
                     
-                    <div class="about-highlight">
-                        <strong>Há mais de 4 anos</strong> ajudando empresários a aumentarem seus lucros de forma sustentável e escalável através de anúncios online
+                    <div class="highlight-box">
+                        <strong>Há mais de 4 anos</strong> ajudando empresários a aumentarem seus lucros através de anúncios online
                     </div>
                     
-                    <div class="about-highlight">
-                        <strong>Já ajudou clientes a faturarem meio milhão de reais</strong> em um único mês através de estratégias de tráfego pago
+                    <div class="highlight-box">
+                        <strong>Já ajudou clientes a faturarem meio milhão de reais</strong> em um único mês
                     </div>
                     
                     <p>Com vasta experiência no mercado digital, já ajudei mais de 50 empresas de diversos segmentos a estruturarem campanhas de alta performance e processos escaláveis de aquisição de clientes.</p>
@@ -702,19 +1037,18 @@
         </div>
     </section>
 
-    <section class="testimonials">
+    <!-- TESTIMONIALS -->
+    <section id="resultados" class="testimonials-section">
         <div class="container">
             <h2 class="section-title">Resultados Reais de Clientes Reais</h2>
-            <p class="section-subtitle">
-                Veja o que nossos parceiros de negócios estão conquistando com nossas estratégias
-            </p>
+            <p class="section-subtitle">Veja o que nossos parceiros de negócios estão conquistando</p>
             
             <div class="testimonials-grid">
                 <div class="testimonial-card">
                     <div class="testimonial-header">
                         <div class="testimonial-avatar">CI</div>
                         <div class="testimonial-info">
-                            <h4>Cliente - Setor Imobiliário</h4>
+                            <h5>Cliente - Setor Imobiliário</h5>
                             <p>Vendas de Imóveis</p>
                         </div>
                     </div>
@@ -722,8 +1056,8 @@
                         "Leads bem qualificados. Temos ainda propostas em andamento, visitas agendadas... foram mais de 170 leads recebidos!"
                     </p>
                     <div class="testimonial-result">
-                        <strong>💰 R$ 3.136.000 em vendas</strong><br>
-                        📍 Setor: Imobiliário
+                        <strong>💰 R$ 3.136.000 em vendas</strong>
+                        <span style="font-size: 13px; color: #888;">Setor: Imobiliário</span>
                     </div>
                 </div>
                 
@@ -731,7 +1065,7 @@
                     <div class="testimonial-header">
                         <div class="testimonial-avatar">LV</div>
                         <div class="testimonial-info">
-                            <h4>Cliente - Loja de Veículos</h4>
+                            <h5>Cliente - Loja de Veículos</h5>
                             <p>Comércio Automotivo</p>
                         </div>
                     </div>
@@ -739,8 +1073,8 @@
                         "Record de vendas esse mês! 22 vendas através do tráfego pago."
                     </p>
                     <div class="testimonial-result">
-                        <strong>🚗 22 vendas em um mês</strong><br>
-                        📍 Setor: Automotivo
+                        <strong>🚗 22 vendas em um mês</strong>
+                        <span style="font-size: 13px; color: #888;">Setor: Automotivo</span>
                     </div>
                 </div>
                 
@@ -748,7 +1082,7 @@
                     <div class="testimonial-header">
                         <div class="testimonial-avatar">EC</div>
                         <div class="testimonial-info">
-                            <h4>Cliente - E-commerce</h4>
+                            <h5>Cliente - E-commerce</h5>
                             <p>Loja Online</p>
                         </div>
                     </div>
@@ -756,8 +1090,8 @@
                         "Batemos 100 mil visualizações! O mais visualizado orgânico que tivemos."
                     </p>
                     <div class="testimonial-result">
-                        <strong>📊 100k+ visualizações</strong><br>
-                        📍 Setor: E-commerce
+                        <strong>📊 100k+ visualizações</strong>
+                        <span style="font-size: 13px; color: #888;">Setor: E-commerce</span>
                     </div>
                 </div>
                 
@@ -765,7 +1099,7 @@
                     <div class="testimonial-header">
                         <div class="testimonial-avatar">CO</div>
                         <div class="testimonial-info">
-                            <h4>Cliente - Corretor</h4>
+                            <h5>Cliente - Corretor</h5>
                             <p>Mercado Imobiliário</p>
                         </div>
                     </div>
@@ -773,8 +1107,8 @@
                         "Leads qualificados, venda fechada e contrato em andamento. Tráfego bem feito!"
                     </p>
                     <div class="testimonial-result">
-                        <strong>🏠 Vendas fechadas + contratos</strong><br>
-                        📍 Setor: Imóveis
+                        <strong>🏠 Vendas fechadas + contratos</strong>
+                        <span style="font-size: 13px; color: #888;">Setor: Imóveis</span>
                     </div>
                 </div>
                 
@@ -782,7 +1116,7 @@
                     <div class="testimonial-header">
                         <div class="testimonial-avatar">VA</div>
                         <div class="testimonial-info">
-                            <h4>Cliente - Veículos</h4>
+                            <h5>Cliente - Veículos</h5>
                             <p>Loja Automotiva</p>
                         </div>
                     </div>
@@ -790,8 +1124,8 @@
                         "5 carros vendidos através do tráfego pago! Leads de qualidade que realmente convertem."
                     </p>
                     <div class="testimonial-result">
-                        <strong>🚘 5 carros vendidos</strong><br>
-                        📍 Setor: Automotivo
+                        <strong>🚘 5 carros vendidos</strong>
+                        <span style="font-size: 13px; color: #888;">Setor: Automotivo</span>
                     </div>
                 </div>
                 
@@ -799,7 +1133,7 @@
                     <div class="testimonial-header">
                         <div class="testimonial-avatar">LI</div>
                         <div class="testimonial-info">
-                            <h4>Cliente - Lives Online</h4>
+                            <h5>Cliente - Lives Online</h5>
                             <p>Produtor de Conteúdo</p>
                         </div>
                     </div>
@@ -807,131 +1141,95 @@
                         "100 mil visualizações na live! Alcance incrível com as estratégias de tráfego."
                     </p>
                     <div class="testimonial-result">
-                        <strong>📺 100k visualizações</strong><br>
-                        📍 Setor: Digital
+                        <strong>📺 100k visualizações</strong>
+                        <span style="font-size: 13px; color: #888;">Setor: Digital</span>
                     </div>
                 </div>
             </div>
 
             <div class="cta-section">
-                <a href="#form" class="cta-button">QUERO RESULTADOS ASSIM</a>
+                <a href="#form" class="btn-primary">QUERO RESULTADOS ASSIM</a>
             </div>
         </div>
     </section>
 
-    <section class="for-who" style="padding: 80px 0; background: #FFFFFF;">
-        <div class="container">
-            <h2 class="section-title">Este Serviço é Para Você Que:</h2>
-            
-            <div style="max-width: 700px; margin: 50px auto 0;">
-                <div style="display: flex; align-items: flex-start; margin-bottom: 25px; background: #F8F9FA; padding: 25px; border-radius: 8px; border-left: 4px solid #0047AB;">
-                    <span style="font-size: 24px; color: #0047AB; margin-right: 15px;">✓</span>
-                    <p style="font-size: 18px; color: #333333;">Quer atrair mais clientes qualificados para seu negócio todos os dias</p>
-                </div>
-                <div style="display: flex; align-items: flex-start; margin-bottom: 25px; background: #F8F9FA; padding: 25px; border-radius: 8px; border-left: 4px solid #0047AB;">
-                    <span style="font-size: 24px; color: #0047AB; margin-right: 15px;">✓</span>
-                    <p style="font-size: 18px; color: #333333;">Já investe em marketing mas não vê retorno consistente e previsível</p>
-                </div>
-                <div style="display: flex; align-items: flex-start; margin-bottom: 25px; background: #F8F9FA; padding: 25px; border-radius: 8px; border-left: 4px solid #0047AB;">
-                    <span style="font-size: 24px; color: #0047AB; margin-right: 15px;">✓</span>
-                    <p style="font-size: 18px; color: #333333;">Deseja escalar suas vendas de forma sustentável e lucrativa</p>
-                </div>
-                <div style="display: flex; align-items: flex-start; margin-bottom: 25px; background: #F8F9FA; padding: 25px; border-radius: 8px; border-left: 4px solid #0047AB;">
-                    <span style="font-size: 24px; color: #0047AB; margin-right: 15px;">✓</span>
-                    <p style="font-size: 18px; color: #333333;">Quer aparecer no Google quando seu cliente buscar pelo seu produto</p>
-                </div>
-                <div style="display: flex; align-items: flex-start; margin-bottom: 25px; background: #F8F9FA; padding: 25px; border-radius: 8px; border-left: 4px solid #0047AB;">
-                    <span style="font-size: 24px; color: #0047AB; margin-right: 15px;">✓</span>
-                    <p style="font-size: 18px; color: #333333;">Busca construir autoridade nas redes sociais e gerar reconhecimento</p>
-                </div>
-                <div style="display: flex; align-items: flex-start; margin-bottom: 25px; background: #F8F9FA; padding: 25px; border-radius: 8px; border-left: 4px solid #0047AB;">
-                    <span style="font-size: 24px; color: #0047AB; margin-right: 15px;">✓</span>
-                    <p style="font-size: 18px; color: #333333;">Quer aproveitar o poder dos anúncios online para crescer mais rápido</p>
-                </div>
-            </div>
-
-            <div class="cta-section">
-                <a href="#form" class="cta-button">SIM, ESSE SOU EU!</a>
-            </div>
-        </div>
-    </section>
-
-    <section style="padding: 80px 0; background: #F8F9FA;">
+    <!-- FAQ -->
+    <section class="faq-section">
         <div class="container">
             <h2 class="section-title">Perguntas Frequentes</h2>
+            <p class="section-subtitle">Tire suas dúvidas sobre nosso serviço</p>
             
-            <div style="max-width: 800px; margin: 50px auto 0;">
-                <div style="background: #FFFFFF; padding: 30px; margin-bottom: 20px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);">
-                    <p style="font-size: 18px; font-weight: 700; margin-bottom: 15px; color: #0047AB;">❓ Quanto custa o serviço de gestão de tráfego pago?</p>
-                    <p style="font-size: 16px; color: #666666; line-height: 1.6;">O investimento varia de acordo com o tamanho do seu negócio e objetivos. Entre em contato para receber uma proposta personalizada. Trabalhamos com diferentes pacotes para atender desde pequenas até grandes empresas.</p>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <div class="faq-question">💰 Quanto custa o serviço de gestão de tráfego pago?</div>
+                    <div class="faq-answer">O investimento varia de acordo com o tamanho do seu negócio e objetivos. Entre em contato para receber uma proposta personalizada. Trabalhamos com diferentes pacotes para atender desde pequenas até grandes empresas.</div>
                 </div>
                 
-                <div style="background: #FFFFFF; padding: 30px; margin-bottom: 20px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);">
-                    <p style="font-size: 18px; font-weight: 700; margin-bottom: 15px; color: #0047AB;">❓ Quanto tempo leva para ver resultados?</p>
-                    <p style="font-size: 16px; color: #666666; line-height: 1.6;">Os primeiros leads começam a chegar nas primeiras semanas. Resultados consistentes e otimizados geralmente aparecem entre 30-60 dias, período em que testamos e ajustamos as campanhas para máxima performance.</p>
+                <div class="faq-item">
+                    <div class="faq-question">⏰ Quanto tempo leva para ver resultados?</div>
+                    <div class="faq-answer">Os primeiros leads começam a chegar nas primeiras semanas. Resultados consistentes e otimizados geralmente aparecem entre 30-60 dias, período em que testamos e ajustamos as campanhas para máxima performance.</div>
                 </div>
                 
-                <div style="background: #FFFFFF; padding: 30px; margin-bottom: 20px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);">
-                    <p style="font-size: 18px; font-weight: 700; margin-bottom: 15px; color: #0047AB;">❓ Vocês trabalham com qual tipo de empresa?</p>
-                    <p style="font-size: 16px; color: #666666; line-height: 1.6;">Atendemos empresas de diversos segmentos: e-commerce, serviços, varejo, imobiliário, automotivo, saúde, educação e mais. Se sua empresa vende online ou pode receber leads pela internet, podemos ajudar.</p>
+                <div class="faq-item">
+                    <div class="faq-question">🏢 Vocês trabalham com qual tipo de empresa?</div>
+                    <div class="faq-answer">Atendemos empresas de diversos segmentos: e-commerce, serviços, varejo, imobiliário, automotivo, saúde, educação e mais. Se sua empresa vende online ou pode receber leads pela internet, podemos ajudar.</div>
                 </div>
                 
-                <div style="background: #FFFFFF; padding: 30px; margin-bottom: 20px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);">
-                    <p style="font-size: 18px; font-weight: 700; margin-bottom: 15px; color: #0047AB;">❓ Preciso ter um site para anunciar?</p>
-                    <p style="font-size: 16px; color: #666666; line-height: 1.6;">Não necessariamente. Podemos criar landing pages específicas para suas campanhas ou usar WhatsApp Business e redes sociais como destino dos anúncios, dependendo da sua estratégia.</p>
+                <div class="faq-item">
+                    <div class="faq-question">🌐 Preciso ter um site para anunciar?</div>
+                    <div class="faq-answer">Não necessariamente. Podemos criar landing pages específicas para suas campanhas ou usar WhatsApp Business e redes sociais como destino dos anúncios, dependendo da sua estratégia.</div>
                 </div>
                 
-                <div style="background: #FFFFFF; padding: 30px; margin-bottom: 20px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);">
-                    <p style="font-size: 18px; font-weight: 700; margin-bottom: 15px; color: #0047AB;">❓ Quanto preciso investir em anúncios?</p>
-                    <p style="font-size: 16px; color: #666666; line-height: 1.6;">O investimento em mídia (além da gestão) varia conforme seu mercado e objetivos. Recomendamos começar com pelo menos R$ 1.500-3.000/mês em anúncios para ter dados suficientes para otimização.</p>
+                <div class="faq-item">
+                    <div class="faq-question">💵 Quanto preciso investir em anúncios?</div>
+                    <div class="faq-answer">O investimento em mídia (além da gestão) varia conforme seu mercado e objetivos. Recomendamos começar com pelo menos R$ 1.500-3.000/mês em anúncios para ter dados suficientes para otimização.</div>
                 </div>
                 
-                <div style="background: #FFFFFF; padding: 30px; margin-bottom: 20px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);">
-                    <p style="font-size: 18px; font-weight: 700; margin-bottom: 15px; color: #0047AB;">❓ Como funciona o contrato?</p>
-                    <p style="font-size: 16px; color: #666666; line-height: 1.6;">Trabalhamos com contratos mensais sem fidelidade. Acreditamos que bons resultados falam por si. Você fica conosco porque está satisfeito, não por obrigação contratual.</p>
+                <div class="faq-item">
+                    <div class="faq-question">📄 Como funciona o contrato?</div>
+                    <div class="faq-answer">Trabalhamos com contratos mensais sem fidelidade. Acreditamos que bons resultados falam por si. Você fica conosco porque está satisfeito, não por obrigação contratual.</div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="form" style="padding: 80px 0; background: linear-gradient(135deg, #0047AB 0%, #002866 100%); color: #FFFFFF;">
+    <!-- FORM -->
+    <section id="form" class="form-section">
         <div class="container">
-            <h2 class="section-title" style="color: #FFFFFF;">Vamos Conversar Sobre Seu Negócio?</h2>
-            <p class="section-subtitle" style="color: rgba(255, 255, 255, 0.9);">
-                Preencha o formulário abaixo e entraremos em contato para entender seus desafios e apresentar como podemos ajudar sua empresa a crescer
-            </p>
+            <h2 class="section-title">Pronto para Escalar Suas Vendas?</h2>
+            <p class="section-subtitle">Preencha o formulário e entraremos em contato em até 24 horas</p>
             
-            <div style="max-width: 600px; margin: 50px auto 0; background: #FFFFFF; padding: 50px; border-radius: 12px; box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);">
+            <div class="form-container">
                 <form action="https://formsubmit.co/otavioandrade.mkt@gmail.com" method="POST">
                     <input type="text" name="_honey" style="display:none">
                     <input type="hidden" name="_captcha" value="false">
                     <input type="hidden" name="_next" value="https://otavioandrademidia-ops.github.io/uresult-landing/obrigado.html">
-                    <input type="hidden" name="_subject" value="Novo Lead - uResult Tráfego Pago">
+                    <input type="hidden" name="_subject" value="🚀 Novo Lead - uResult Tráfego Pago">
                     <input type="hidden" name="_template" value="table">
                     
-                    <div style="margin-bottom: 25px;">
-                        <label style="display: block; margin-bottom: 8px; font-weight: 600; color: #333333;">Nome Completo *</label>
-                        <input type="text" name="nome" required style="width: 100%; padding: 15px; background: #F8F9FA; border: 2px solid #E0E0E0; border-radius: 8px; color: #333333; font-size: 16px; font-family: 'Inter', sans-serif;">
+                    <div class="form-group">
+                        <label>Nome Completo *</label>
+                        <input type="text" name="nome" required>
                     </div>
                     
-                    <div style="margin-bottom: 25px;">
-                        <label style="display: block; margin-bottom: 8px; font-weight: 600; color: #333333;">E-mail *</label>
-                        <input type="email" name="email" required style="width: 100%; padding: 15px; background: #F8F9FA; border: 2px solid #E0E0E0; border-radius: 8px; color: #333333; font-size: 16px; font-family: 'Inter', sans-serif;">
+                    <div class="form-group">
+                        <label>E-mail *</label>
+                        <input type="email" name="email" required>
                     </div>
                     
-                    <div style="margin-bottom: 25px;">
-                        <label style="display: block; margin-bottom: 8px; font-weight: 600; color: #333333;">WhatsApp (com DDD) *</label>
-                        <input type="tel" name="whatsapp" placeholder="(24) 99999-9999" required style="width: 100%; padding: 15px; background: #F8F9FA; border: 2px solid #E0E0E0; border-radius: 8px; color: #333333; font-size: 16px; font-family: 'Inter', sans-serif;">
+                    <div class="form-group">
+                        <label>WhatsApp *</label>
+                        <input type="tel" name="whatsapp" placeholder="(24) 99999-9999" required>
                     </div>
                     
-                    <div style="margin-bottom: 25px;">
-                        <label style="display: block; margin-bottom: 8px; font-weight: 600; color: #333333;">Nome da Empresa *</label>
-                        <input type="text" name="empresa" required style="width: 100%; padding: 15px; background: #F8F9FA; border: 2px solid #E0E0E0; border-radius: 8px; color: #333333; font-size: 16px; font-family: 'Inter', sans-serif;">
+                    <div class="form-group">
+                        <label>Nome da Empresa *</label>
+                        <input type="text" name="empresa" required>
                     </div>
                     
-                    <div style="margin-bottom: 25px;">
-                        <label style="display: block; margin-bottom: 8px; font-weight: 600; color: #333333;">Segmento *</label>
-                        <select name="segmento" required style="width: 100%; padding: 15px; background: #F8F9FA; border: 2px solid #E0E0E0; border-radius: 8px; color: #333333; font-size: 16px; font-family: 'Inter', sans-serif;">
+                    <div class="form-group">
+                        <label>Segmento *</label>
+                        <select name="segmento" required>
                             <option value="">Selecione...</option>
                             <option value="ecommerce">E-commerce</option>
                             <option value="servicos">Serviços</option>
@@ -944,34 +1242,37 @@
                         </select>
                     </div>
                     
-                    <div style="margin-bottom: 25px;">
-                        <label style="display: block; margin-bottom: 8px; font-weight: 600; color: #333333;">Conte sobre seu negócio</label>
-                        <textarea name="mensagem" placeholder="Quanto mais detalhes, melhor..." style="width: 100%; padding: 15px; background: #F8F9FA; border: 2px solid #E0E0E0; border-radius: 8px; color: #333333; font-size: 16px; font-family: 'Inter', sans-serif; min-height: 120px; resize: vertical;"></textarea>
+                    <div class="form-group">
+                        <label>Conte sobre seu negócio</label>
+                        <textarea name="mensagem" placeholder="Quanto mais detalhes, melhor podemos ajudar..."></textarea>
                     </div>
                     
-                    <button type="submit" class="submit-button" style="width: 100%; padding: 20px; background: #0047AB; color: #FFFFFF; border: none; border-radius: 50px; font-size: 18px; font-weight: 700; cursor: pointer;">QUERO AUMENTAR MINHAS VENDAS</button>
-                    
-                    <p style="text-align: center; margin-top: 20px; font-size: 14px; color: #333333;">🔒 Seus dados estão seguros</p>
+                    <button type="submit" class="btn-primary" style="width: 100%;">QUERO AUMENTAR MINHAS VENDAS</button>
                 </form>
             </div>
         </div>
     </section>
-
-    <footer style="background: #1A1A1A; padding: 40px 0; text-align: center; color: #FFFFFF;">
+    <!-- FOOTER -->
+    <footer>
         <div class="container">
-            <p style="font-size: 14px; opacity: 0.8;">&copy; 2026 uResult - Todos os direitos reservados</p>
-            <div style="margin-top: 20px;">
-                <a href="https://instagram.com/euotavioandrade" target="_blank" style="color: #0047AB; text-decoration: none; margin: 0 15px; font-size: 16px;">📱 Instagram</a>
-                <a href="mailto:otavioandrade.mkt@gmail.com" style="color: #0047AB; text-decoration: none; margin: 0 15px; font-size: 16px;">✉️ E-mail</a>
-                <a href="https://wa.me/5524998374977" target="_blank" style="color: #0047AB; text-decoration: none; margin: 0 15px; font-size: 16px;">💬 WhatsApp</a>
+            <div class="footer-content">
+                <div class="footer-logo">uResult</div>
+                <div class="footer-links">
+                    <a href="https://instagram.com/euotavioandrade" target="_blank">Instagram</a>
+                    <a href="mailto:otavioandrade.mkt@gmail.com">E-mail</a>
+                    <a href="https://wa.me/5524998374977" target="_blank">WhatsApp</a>
+                </div>
+                <p class="footer-copy">&copy; 2026 uResult - Todos os direitos reservados</p>
             </div>
         </div>
     </footer>
 
+    <!-- WHATSAPP FLOAT -->
     <a href="https://wa.me/5524998374977?text=Olá!%20Vim%20do%20site%20e%20quero%20saber%20mais%20sobre%20tráfego%20pago" class="whatsapp-float" target="_blank">
         💬
     </a>
 
+    <!-- SMOOTH SCROLL -->
     <script>
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
