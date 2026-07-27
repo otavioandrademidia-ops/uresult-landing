@@ -3,10 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Diagnóstico Gratuito | Transforme Sua Empresa em Máquina de Vendas - uResult</title>
-    <meta name="description" content="Descubra como aumentar suas vendas em até 300% com estratégias validadas. Diagnóstico gratuito e personalizado com Otavio Andrade.">
+    <title>uResult - Gestão de Tráfego Pago | Aumente seu Faturamento</title>
+    <meta name="description" content="Ajudamos sua empresa a faturar mais através dos anúncios online. Mais de 50 empresas atendidas com resultados comprovados.">
     
-    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
     
     <style>
@@ -18,8 +17,8 @@
         
         body {
             font-family: 'Inter', sans-serif;
-            background: #0A0A0A;
-            color: #FFFFFF;
+            background: #FFFFFF;
+            color: #1A1A1A;
             line-height: 1.6;
         }
         
@@ -29,255 +28,346 @@
             padding: 0 20px;
         }
         
-        /* HEADER */
         header {
-            padding: 20px 0;
-            border-bottom: 1px solid #1A1A1A;
+            padding: 30px 0;
+            background: #FFFFFF;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
         }
         
-        .logo {
-            font-size: 28px;
-            font-weight: 800;
-            background: linear-gradient(135deg, #00FF88 0%, #00CC70 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        
-        /* HERO SECTION */
-        .hero {
-            padding: 80px 0;
+        .header-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
             text-align: center;
+        }
+        
+        .logo-text {
+            font-size: 36px;
+            font-weight: 800;
+            color: #0047AB;
+            margin-bottom: 5px;
+        }
+        
+        .tagline {
+            font-size: 14px;
+            color: #666666;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .hero {
+            background: linear-gradient(135deg, #0047AB 0%, #002866 100%);
+            padding: 100px 0;
+            text-align: center;
+            color: #FFFFFF;
         }
         
         .hero h1 {
             font-size: 48px;
             font-weight: 800;
             line-height: 1.2;
-            margin-bottom: 20px;
-            background: linear-gradient(135deg, #FFFFFF 0%, #00FF88 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+            margin-bottom: 30px;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
         }
         
         .hero .subtitle {
             font-size: 20px;
-            color: #B4B4B4;
-            max-width: 700px;
-            margin: 0 auto 40px;
             line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto 40px;
         }
         
         .cta-button {
             display: inline-block;
-            background: #00FF88;
-            color: #0A0A0A;
+            background: #FFFFFF;
+            color: #0047AB;
             padding: 20px 50px;
             font-size: 18px;
             font-weight: 700;
             text-decoration: none;
-            border-radius: 8px;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            cursor: pointer;
+            border-radius: 50px;
+            transition: all 0.3s ease;
             border: none;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
         }
         
         .cta-button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 30px rgba(0, 255, 136, 0.3);
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
         }
         
-        .trust-badge {
-            margin-top: 20px;
-            font-size: 14px;
-            color: #B4B4B4;
-        }
-        
-        /* SOCIAL PROOF NUMBERS */
         .social-proof {
-            background: #1A1A1A;
+            background: #F8F9FA;
             padding: 60px 0;
-        }
-        
-        .stats {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 40px;
             text-align: center;
         }
         
-        .stat-item h3 {
+        .platforms {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 60px;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+        }
+        
+        .platform-logo {
             font-size: 48px;
-            color: #00FF88;
-            font-weight: 800;
-            margin-bottom: 10px;
         }
         
-        .stat-item p {
-            color: #B4B4B4;
-            font-size: 16px;
-        }
-        
-        /* FOR WHO SECTION */
-        .for-who {
-            padding: 80px 0;
+        .companies-served {
+            font-size: 24px;
+            color: #0047AB;
+            font-weight: 700;
         }
         
         .section-title {
             font-size: 36px;
             font-weight: 800;
             text-align: center;
-            margin-bottom: 50px;
+            margin-bottom: 20px;
+            color: #0047AB;
         }
         
-        .checklist {
-            max-width: 700px;
-            margin: 0 auto;
-        }
-        
-        .check-item {
-            display: flex;
-            align-items: flex-start;
-            margin-bottom: 25px;
-            background: #1A1A1A;
-            padding: 20px;
-            border-radius: 8px;
-            border-left: 4px solid #00FF88;
-        }
-        
-        .check-icon {
-            font-size: 24px;
-            color: #00FF88;
-            margin-right: 15px;
-            flex-shrink: 0;
-        }
-        
-        .check-item p {
+        .section-subtitle {
             font-size: 18px;
-            color: #FFFFFF;
+            text-align: center;
+            color: #666666;
+            max-width: 700px;
+            margin: 0 auto 50px;
+            line-height: 1.8;
         }
         
-        /* WHAT YOU GET */
-        .what-you-get {
-            background: #1A1A1A;
+        .why-advertise {
             padding: 80px 0;
         }
         
-        .benefits-grid {
+        .content-block {
+            max-width: 900px;
+            margin: 0 auto 40px;
+            background: #F8F9FA;
+            padding: 40px;
+            border-radius: 12px;
+            border-left: 5px solid #0047AB;
+        }
+        
+        .content-block h3 {
+            font-size: 24px;
+            color: #0047AB;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+        
+        .content-block p {
+            font-size: 18px;
+            line-height: 1.8;
+            color: #333333;
+            margin-bottom: 15px;
+        }
+        
+        .strategies {
+            padding: 80px 0;
+            background: linear-gradient(135deg, #0047AB 0%, #002866 100%);
+            color: #FFFFFF;
+        }
+        
+        .strategies .section-title {
+            color: #FFFFFF;
+        }
+        
+        .strategies .section-subtitle {
+            color: rgba(255, 255, 255, 0.9);
+        }
+        
+        .strategy-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+        
+        .strategy-card {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 40px;
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.3s ease;
+        }
+        
+        .strategy-card:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.15);
+        }
+        
+        .strategy-icon {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+        
+        .strategy-card h3 {
+            font-size: 24px;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+        
+        .strategy-card p {
+            font-size: 16px;
+            line-height: 1.6;
+        }
+        
+        .cta-section {
+            text-align: center;
+            margin: 50px 0;
+        }
+        
+        .how-it-works {
+            padding: 80px 0;
+            background: #F8F9FA;
+        }
+        
+        .services-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 30px;
             margin-top: 50px;
         }
         
-        .benefit-card {
-            background: #0A0A0A;
-            padding: 30px;
+        .service-card {
+            background: #FFFFFF;
+            padding: 40px;
             border-radius: 12px;
-            border: 1px solid #2A2A2A;
-            transition: border-color 0.3s ease;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
         }
         
-        .benefit-card:hover {
-            border-color: #00FF88;
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 71, 171, 0.15);
         }
         
-        .benefit-icon {
-            font-size: 36px;
+        .service-icon {
+            font-size: 40px;
             margin-bottom: 20px;
         }
         
-        .benefit-card h3 {
+        .service-card h3 {
             font-size: 20px;
+            color: #0047AB;
             margin-bottom: 15px;
+            font-weight: 700;
+        }
+        
+        .service-card p {
+            font-size: 16px;
+            color: #666666;
+            line-height: 1.6;
+        }
+        
+        .why-uresult {
+            padding: 80px 0;
+        }
+        
+        .credentials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+        
+        .credential-card {
+            text-align: center;
+            padding: 30px;
+            background: #F8F9FA;
+            border-radius: 12px;
+        }
+        
+        .credential-icon {
+            font-size: 48px;
+            margin-bottom: 15px;
+        }
+        
+        .credential-card h4 {
+            font-size: 18px;
+            color: #0047AB;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+        
+        .credential-card p {
+            font-size: 14px;
+            color: #666666;
+        }
+        
+        .about {
+            padding: 80px 0;
+            background: linear-gradient(135deg, #0047AB 0%, #002866 100%);
             color: #FFFFFF;
         }
         
-        .benefit-card p {
-            color: #B4B4B4;
-            font-size: 16px;
+        .about .section-title {
+            color: #FFFFFF;
         }
         
-        .value-box {
-            text-align: center;
-            margin-top: 50px;
-            padding: 30px;
-            background: linear-gradient(135deg, #1A1A1A 0%, #0A0A0A 100%);
-            border-radius: 12px;
-            border: 2px solid #00FF88;
-        }
-        
-        .old-price {
-            font-size: 24px;
-            color: #B4B4B4;
-            text-decoration: line-through;
-        }
-        
-        .new-price {
-            font-size: 48px;
-            color: #00FF88;
-            font-weight: 800;
-            margin: 10px 0;
-        }
-        
-        /* HOW IT WORKS */
-        .how-it-works {
-            padding: 80px 0;
-        }
-        
-        .steps {
+        .about-content {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 40px;
-            margin-top: 50px;
-        }
-        
-        .step {
-            text-align: center;
-            position: relative;
-        }
-        
-        .step-number {
-            width: 80px;
-            height: 80px;
-            background: #00FF88;
-            color: #0A0A0A;
-            border-radius: 50%;
-            display: flex;
+            grid-template-columns: 1fr 2fr;
+            gap: 60px;
             align-items: center;
-            justify-content: center;
-            font-size: 32px;
-            font-weight: 800;
-            margin: 0 auto 20px;
+            max-width: 1000px;
+            margin: 50px auto 0;
         }
         
-        .step h3 {
-            font-size: 20px;
-            margin-bottom: 15px;
+        .about-image {
+            width: 100%;
+            max-width: 300px;
+            border-radius: 12px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
         }
         
-        .step p {
-            color: #B4B4B4;
+        .about-text h3 {
+            font-size: 28px;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+        
+        .about-text p {
             font-size: 16px;
+            margin-bottom: 20px;
+            line-height: 1.8;
         }
         
-        /* RESULTS */
-        .results {
-            background: #1A1A1A;
-            padding: 80px 0;
+        .about-highlight {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #FFFFFF;
+            margin: 20px 0;
         }
         
         .testimonials {
+            padding: 80px 0;
+            background: #F8F9FA;
+        }
+        
+        .testimonials-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 30px;
             margin-top: 50px;
         }
         
         .testimonial-card {
-            background: #0A0A0A;
+            background: #FFFFFF;
             padding: 30px;
             border-radius: 12px;
-            border: 1px solid #2A2A2A;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
         }
         
         .testimonial-header {
@@ -287,275 +377,51 @@
         }
         
         .testimonial-avatar {
-            width: 60px;
-            height: 60px;
+            width: 50px;
+            height: 50px;
             border-radius: 50%;
-            background: linear-gradient(135deg, #00FF88 0%, #00CC70 100%);
-            margin-right: 15px;
+            background: #0047AB;
             display: flex;
             align-items: center;
             justify-content: center;
             font-weight: 800;
-            font-size: 20px;
-            color: #0A0A0A;
+            font-size: 18px;
+            color: #FFFFFF;
+            margin-right: 15px;
         }
         
         .testimonial-info h4 {
-            font-size: 18px;
+            font-size: 16px;
+            color: #0047AB;
             margin-bottom: 5px;
+            font-weight: 700;
         }
         
         .testimonial-info p {
-            font-size: 14px;
-            color: #B4B4B4;
+            font-size: 13px;
+            color: #666666;
         }
         
         .testimonial-text {
-            color: #FFFFFF;
-            font-size: 16px;
+            font-size: 15px;
             line-height: 1.6;
+            color: #333333;
             margin-bottom: 20px;
+            font-style: italic;
         }
         
         .testimonial-result {
-            background: #1A1A1A;
+            background: #F8F9FA;
             padding: 15px;
             border-radius: 8px;
-            border-left: 4px solid #00FF88;
+            border-left: 4px solid #0047AB;
         }
         
         .testimonial-result strong {
-            color: #00FF88;
-            font-size: 18px;
-        }
-        
-        /* ABOUT */
-        .about {
-            padding: 80px 0;
-        }
-        
-        .about-content {
-            display: grid;
-            grid-template-columns: 1fr 2fr;
-            gap: 50px;
-            align-items: center;
-            max-width: 900px;
-            margin: 50px auto 0;
-        }
-        
-        .about-image {
-            width: 100%;
-            aspect-ratio: 1;
-            background: linear-gradient(135deg, #00FF88 0%, #00CC70 100%);
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 72px;
-            font-weight: 800;
-            color: #0A0A0A;
-        }
-        
-        .about-text h3 {
-            font-size: 28px;
-            margin-bottom: 20px;
-        }
-        
-        .about-text p {
-            color: #B4B4B4;
+            color: #0047AB;
             font-size: 16px;
-            margin-bottom: 20px;
-            line-height: 1.8;
         }
         
-        .about-highlight {
-            background: #1A1A1A;
-            padding: 20px;
-            border-radius: 8px;
-            border-left: 4px solid #00FF88;
-            margin: 20px 0;
-        }
-        
-        .about-highlight strong {
-            color: #00FF88;
-            font-size: 18px;
-        }
-        
-        .credentials {
-            margin-top: 30px;
-        }
-        
-        .credential-item {
-            display: flex;
-            align-items: center;
-            margin-bottom: 15px;
-        }
-        
-        .credential-item span {
-            color: #00FF88;
-            margin-right: 10px;
-            font-size: 20px;
-        }
-        
-        /* URGENCY */
-        .urgency {
-            background: linear-gradient(135deg, #FF6B35 0%, #FF8C42 100%);
-            padding: 60px 0;
-            text-align: center;
-        }
-        
-        .urgency h2 {
-            font-size: 36px;
-            margin-bottom: 20px;
-        }
-        
-        .urgency p {
-            font-size: 18px;
-            margin-bottom: 30px;
-        }
-        
-        .spots-left {
-            font-size: 48px;
-            font-weight: 800;
-            margin: 20px 0;
-        }
-        
-        /* FORM SECTION */
-        .form-section {
-            padding: 80px 0;
-            background: #0A0A0A;
-        }
-        
-        .form-container {
-            max-width: 600px;
-            margin: 50px auto 0;
-            background: #1A1A1A;
-            padding: 50px;
-            border-radius: 12px;
-            border: 1px solid #2A2A2A;
-        }
-        
-        .form-group {
-            margin-bottom: 25px;
-        }
-        
-        .form-group label {
-            display: block;
-            margin-bottom: 8px;
-            font-weight: 600;
-            color: #FFFFFF;
-        }
-        
-        .form-group input,
-        .form-group select,
-        .form-group textarea {
-            width: 100%;
-            padding: 15px;
-            background: #0A0A0A;
-            border: 1px solid #2A2A2A;
-            border-radius: 8px;
-            color: #FFFFFF;
-            font-size: 16px;
-            font-family: 'Inter', sans-serif;
-        }
-        
-        .form-group input:focus,
-        .form-group select:focus,
-        .form-group textarea:focus {
-            outline: none;
-            border-color: #00FF88;
-        }
-        
-        .form-group textarea {
-            min-height: 120px;
-            resize: vertical;
-        }
-        
-        .submit-button {
-            width: 100%;
-            padding: 20px;
-            background: #00FF88;
-            color: #0A0A0A;
-            border: none;
-            border-radius: 8px;
-            font-size: 18px;
-            font-weight: 700;
-            cursor: pointer;
-            transition: transform 0.3s ease;
-        }
-        
-        .submit-button:hover {
-            transform: translateY(-2px);
-        }
-        
-        .form-footer {
-            text-align: center;
-            margin-top: 20px;
-            font-size: 14px;
-            color: #B4B4B4;
-        }
-        
-        /* FAQ */
-        .faq {
-            background: #1A1A1A;
-            padding: 80px 0;
-        }
-        
-        .faq-list {
-            max-width: 800px;
-            margin: 50px auto 0;
-        }
-        
-        .faq-item {
-            background: #0A0A0A;
-            padding: 25px;
-            margin-bottom: 20px;
-            border-radius: 8px;
-            border: 1px solid #2A2A2A;
-        }
-        
-        .faq-question {
-            font-size: 18px;
-            font-weight: 600;
-            margin-bottom: 15px;
-            color: #00FF88;
-        }
-        
-        .faq-answer {
-            color: #B4B4B4;
-            line-height: 1.6;
-        }
-        
-        /* FOOTER */
-        footer {
-            background: #0A0A0A;
-            padding: 40px 0;
-            text-align: center;
-            border-top: 1px solid #1A1A1A;
-        }
-        
-        footer p {
-            color: #B4B4B4;
-            font-size: 14px;
-        }
-        
-        .social-links {
-            margin-top: 20px;
-        }
-        
-        .social-links a {
-            color: #00FF88;
-            text-decoration: none;
-            margin: 0 15px;
-            font-size: 16px;
-            transition: opacity 0.3s ease;
-        }
-        
-        .social-links a:hover {
-            opacity: 0.7;
-        }
-        
-        /* WHATSAPP FLOAT BUTTON */
         .whatsapp-float {
             position: fixed;
             width: 60px;
@@ -580,14 +446,9 @@
             transform: scale(1.1);
         }
         
-        /* RESPONSIVE */
         @media (max-width: 768px) {
             .hero h1 {
                 font-size: 32px;
-            }
-            
-            .hero .subtitle {
-                font-size: 18px;
             }
             
             .section-title {
@@ -595,14 +456,6 @@
             }
             
             .about-content {
-                grid-template-columns: 1fr;
-            }
-            
-            .form-container {
-                padding: 30px 20px;
-            }
-            
-            .testimonials {
                 grid-template-columns: 1fr;
             }
             
@@ -618,383 +471,507 @@
 </head>
 <body>
 
-    <!-- HEADER -->
     <header>
         <div class="container">
-            <div class="logo">uResult</div>
+            <div class="header-content">
+                <div class="logo-text">uResult</div>
+                <div class="tagline">Gestão de Tráfego Pago</div>
+            </div>
         </div>
     </header>
 
-    <!-- HERO SECTION -->
     <section class="hero">
         <div class="container">
-            <h1>Transforme Sua Empresa em uma Máquina Previsível de Vendas</h1>
-            <p class="subtitle">O método comprovado que já ajudou +50 empresas a aumentarem seu faturamento em até 300% com estratégias validadas de tráfego pago e funis de vendas</p>
-            <a href="#form" class="cta-button">QUERO MEU DIAGNÓSTICO GRATUITO</a>
-            <p class="trust-badge">💬 Resposta em menos de 2 horas | 🔒 Seus dados estão seguros</p>
+            <h1>Ajudamos sua empresa a faturar mais através dos anúncios online</h1>
+            <p class="subtitle">
+                O método comprovado que já ajudou +50 empresas a aumentarem seu faturamento com estratégias validadas de tráfego pago.
+                <br><br>
+                Clique no botão abaixo e descubra como podemos aumentar o faturamento da sua empresa assim como já fizemos com nossos parceiros de negócios!
+            </p>
+            <a href="#form" class="cta-button">QUERO AUMENTAR MINHAS VENDAS</a>
         </div>
     </section>
 
-    <!-- SOCIAL PROOF -->
     <section class="social-proof">
         <div class="container">
-            <div class="stats">
-                <div class="stat-item">
-                    <h3>1.744+</h3>
-                    <p>Seguidores no Instagram</p>
-                </div>
-                <div class="stat-item">
-                    <h3>3.7k+</h3>
-                    <p>Visualizações Mensais</p>
-                </div>
-                <div class="stat-item">
-                    <h3>50+</h3>
-                    <p>Empresas Atendidas</p>
-                </div>
-                <div class="stat-item">
-                    <h3>300%</h3>
-                    <p>Aumento Médio em Vendas</p>
-                </div>
+            <div class="platforms">
+                <div class="platform-logo">🔍</div>
+                <div class="platform-logo">📘</div>
+                <div class="platform-logo">📸</div>
             </div>
+            <p class="companies-served">✅ Mais de 50 Empresas Atendidas</p>
         </div>
     </section>
 
-    <!-- FOR WHO -->
-    <section class="for-who">
+    <section class="why-advertise">
         <div class="container">
-            <h2 class="section-title">Esse Diagnóstico é Para Você Que:</h2>
-            <div class="checklist">
-                <div class="check-item">
-                    <span class="check-icon">✓</span>
-                    <p>Quer escalar sua empresa mas não sabe por onde começar</p>
-                </div>
-                <div class="check-item">
-                    <span class="check-icon">✓</span>
-                    <p>Investe em marketing mas não vê retorno consistente</p>
-                </div>
-                <div class="check-item">
-                    <span class="check-icon">✓</span>
-                    <p>Tem dificuldade em gerar leads qualificados diariamente</p>
-                </div>
-                <div class="check-item">
-                    <span class="check-icon">✓</span>
-                    <p>Quer um processo previsível e escalável de vendas</p>
-                </div>
-                <div class="check-item">
-                    <span class="check-icon">✓</span>
-                    <p>Busca aumentar o ROI das campanhas de tráfego pago</p>
-                </div>
+            <h2 class="section-title">Utilizamos nossas estratégias para te trazer resultados</h2>
+            
+            <div class="content-block">
+                <h3>Esteja na avenida mais movimentada do mundo</h3>
+                <p>
+                    Se você não está bem posicionado na avenida mais movimentada do mundo que são as redes sociais e redes de pesquisa - Instagram, Google e Facebook - você está deixando muito dinheiro na mesa.
+                </p>
+                <p>
+                    Fique disponível para seu cliente sempre que ele procurar pelo seu produto/serviço nos maiores canais de vendas do mundo e venda mais!
+                </p>
             </div>
-            <div style="text-align: center; margin-top: 50px;">
-                <a href="#form" class="cta-button">SIM, ESSE SOU EU</a>
+
+            <div class="content-block">
+                <h3>Seu cliente está te procurando no Google</h3>
+                <p>
+                    Quando você quer comprar algum tipo de produto ou serviço, você utiliza o Google. Seu cliente também faz isso!
+                </p>
+                <p>
+                    <strong>Quando você pesquisa sobre o que você vende, você aparece no topo?</strong>
+                </p>
+            </div>
+
+            <div class="content-block">
+                <h3>Autoridade e reconhecimento nas redes sociais</h3>
+                <p>
+                    Antes do seu cliente estar no momento de compra, ele precisa saber que você é autoridade e referência no que você faz ou vende.
+                </p>
+                <p>
+                    Como fazer isso? Aparecendo para ele com frequência, com bons conteúdos e resultados reais. É onde entra o Instagram e Facebook para gerar esse reconhecimento.
+                </p>
+            </div>
+
+            <div class="cta-section">
+                <a href="#form" class="cta-button">QUERO APARECER PARA MEU PÚBLICO</a>
             </div>
         </div>
     </section>
 
-    <!-- WHAT YOU GET -->
-    <section class="what-you-get">
+    <section class="strategies">
         <div class="container">
-            <h2 class="section-title">O Que Você Vai Receber no Diagnóstico</h2>
-            <div class="benefits-grid">
-                <div class="benefit-card">
-                    <div class="benefit-icon">📋</div>
-                    <h3>Análise Completa de Tráfego</h3>
-                    <p>Auditoria profunda das suas campanhas, site, funil e posicionamento digital</p>
+            <h2 class="section-title">Apareça para as pessoas que querem comprar o seu produto ou serviço</h2>
+            <p class="section-subtitle">
+                Você já percebeu que as pessoas estão o tempo todo no celular? Se as pessoas passam a maior parte do seu dia no celular, nas redes sociais, você acredita que seu público comprador também está lá?
+                <br><br>
+                <strong>Com os anúncios online você tem o super poder de aparecer exatamente para seu público comprador.</strong>
+            </p>
+            
+            <div class="strategy-grid">
+                <div class="strategy-card">
+                    <div class="strategy-icon">🔍</div>
+                    <h3>Google Ads</h3>
+                    <p>Apareça no momento exato em que seu cliente está buscando pelo seu produto ou serviço. Capture a intenção de compra no momento certo.</p>
                 </div>
-                <div class="benefit-card">
-                    <div class="benefit-icon">🎯</div>
-                    <h3>Identificação de Gargalos</h3>
-                    <p>Descubra exatamente o que está impedindo suas vendas de escalarem</p>
+                
+                <div class="strategy-card">
+                    <div class="strategy-icon">📘</div>
+                    <h3>Facebook Ads</h3>
+                    <p>Construa autoridade e reconhecimento de marca. Alcance milhares de pessoas com conteúdos relevantes e estratégicos.</p>
                 </div>
-                <div class="benefit-card">
-                    <div class="benefit-icon">💡</div>
-                    <h3>Estratégia Personalizada</h3>
-                    <p>Plano de tráfego pago e funil de vendas específico para seu negócio</p>
-                </div>
-                <div class="benefit-card">
-                    <div class="benefit-icon">📊</div>
-                    <h3>Projeção de ROI</h3>
-                    <p>Veja quanto você pode faturar otimizando suas campanhas</p>
-                </div>
-                <div class="benefit-card">
-                    <div class="benefit-icon">🚀</div>
-                    <h3>Quick Wins</h3>
-                    <p>3 ações imediatas para melhorar seus resultados hoje mesmo</p>
-                </div>
-                <div class="benefit-card">
-                    <div class="benefit-icon">📈</div>
-                    <h3>Roadmap 90 Dias</h3>
-                    <p>Cronograma completo de implementação para escalar suas vendas</p>
+                
+                <div class="strategy-card">
+                    <div class="strategy-icon">📸</div>
+                    <h3>Instagram Ads</h3>
+                    <p>Engaje seu público onde eles passam mais tempo. Gere conexão e desejo através de conteúdo visual impactante.</p>
                 </div>
             </div>
-            <div class="value-box">
-                <p class="old-price">Valor normal: R$ 997</p>
-                <p class="new-price">HOJE: GRATUITO</p>
-                <p style="color: #B4B4B4;">Investimento de tempo: apenas 30-45 minutos</p>
+
+            <div class="cta-section">
+                <a href="#form" class="cta-button">QUERO COMEÇAR AGORA</a>
             </div>
         </div>
     </section>
-
-    <!-- HOW IT WORKS -->
-    <section class="how-it-works">
+<section class="how-it-works">
         <div class="container">
-            <h2 class="section-title">Como Funciona</h2>
-            <div class="steps">
-                <div class="step">
-                    <div class="step-number">1</div>
-                    <h3>Preencha o Formulário</h3>
-                    <p>Leva apenas 2 minutos para nos contar sobre sua empresa</p>
+            <h2 class="section-title">Como Funciona Nosso Trabalho</h2>
+            <p class="section-subtitle">
+                Um processo estruturado e comprovado para trazer resultados consistentes para sua empresa
+            </p>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">🎯</div>
+                    <h3>Planejamento Estratégico</h3>
+                    <p>Análise profunda do seu negócio, público-alvo e concorrência para criar estratégias personalizadas.</p>
                 </div>
-                <div class="step">
-                    <div class="step-number">2</div>
-                    <h3>Agenda sua Conversa</h3>
-                    <p>Escolha o melhor horário para nossa reunião estratégica</p>
+                
+                <div class="service-card">
+                    <div class="service-icon">🎨</div>
+                    <h3>Criação de Campanhas</h3>
+                    <p>Desenvolvimento de anúncios persuasivos e criativos que convertem visualizações em clientes.</p>
                 </div>
-                <div class="step">
-                    <div class="step-number">3</div>
-                    <h3>Receba seu Diagnóstico</h3>
-                    <p>Documento completo com análise e plano de ação personalizado</p>
+                
+                <div class="service-card">
+                    <div class="service-icon">🚀</div>
+                    <h3>Lançamento e Otimização</h3>
+                    <p>Implementação das campanhas com acompanhamento diário e ajustes para maximizar resultados.</p>
                 </div>
-                <div class="step">
-                    <div class="step-number">4</div>
-                    <h3>Você Decide</h3>
-                    <p>Implemente sozinho ou conte com nossa ajuda. Zero pressão.</p>
+                
+                <div class="service-card">
+                    <div class="service-icon">📊</div>
+                    <h3>Análise de Dados</h3>
+                    <p>Monitoramento constante de métricas e KPIs para tomar decisões baseadas em dados reais.</p>
                 </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">📈</div>
+                    <h3>Escala de Resultados</h3>
+                    <p>Após validação, escalamos os investimentos para multiplicar seus resultados de forma previsível.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">💬</div>
+                    <h3>Relatórios Transparentes</h3>
+                    <p>Relatórios detalhados mensais mostrando exatamente onde seu investimento está gerando retorno.</p>
+                </div>
+            </div>
+
+            <div class="cta-section">
+                <a href="#form" class="cta-button">QUERO CONHECER A ESTRATÉGIA</a>
             </div>
         </div>
     </section>
 
-    <!-- RESULTS -->
-    <section class="results">
+    <section class="why-uresult">
         <div class="container">
-            <h2 class="section-title">Resultados Reais de Clientes</h2>
-            <div class="testimonials">
-                <div class="testimonial-card">
-                    <div class="testimonial-header">
-                        <div class="testimonial-avatar">RC</div>
-                        <div class="testimonial-info">
-                            <h4>Roberto Costa</h4>
-                            <p>CEO - E-commerce</p>
-                        </div>
-                    </div>
-                    <p class="testimonial-text">"Aplicando as estratégias da uResult, conseguimos escalar nosso faturamento de forma consistente. O processo ficou muito mais previsível."</p>
-                    <div class="testimonial-result">
-                        <strong>+300% em faturamento</strong> em 6 meses
-                    </div>
+            <h2 class="section-title">Por Que Escolher a uResult?</h2>
+            <p class="section-subtitle">
+                Experiência, metodologia e resultados comprovados que fazem a diferença
+            </p>
+            
+            <div class="credentials-grid">
+                <div class="credential-card">
+                    <div class="credential-icon">⏱️</div>
+                    <h4>+4 Anos de Experiência</h4>
+                    <p>Experiência sólida no mercado de tráfego pago com centenas de campanhas gerenciadas</p>
                 </div>
-                <div class="testimonial-card">
-                    <div class="testimonial-header">
-                        <div class="testimonial-avatar">MS</div>
-                        <div class="testimonial-info">
-                            <h4>Mariana Santos</h4>
-                            <p>Fundadora - Infoprodutos</p>
-                        </div>
-                    </div>
-                    <p class="testimonial-text">"O diagnóstico foi cirúrgico. Em menos de 3 meses já tínhamos dobrado nossa geração de leads e melhorado muito a qualificação."</p>
-                    <div class="testimonial-result">
-                        <strong>+250% em leads qualificados</strong>
-                    </div>
+                
+                <div class="credential-card">
+                    <div class="credential-icon">✅</div>
+                    <h4>+50 Empresas Atendidas</h4>
+                    <p>Dezenas de empresas já confiaram em nosso trabalho e obtiveram resultados reais</p>
                 </div>
-                <div class="testimonial-card">
-                    <div class="testimonial-header">
-                        <div class="testimonial-avatar">PL</div>
-                        <div class="testimonial-info">
-                            <h4>Paulo Lima</h4>
-                            <p>Diretor - Serviços B2B</p>
-                        </div>
-                    </div>
-                    <p class="testimonial-text">"Otavio nos ajudou a estruturar todo nosso funil de vendas. Hoje temos previsibilidade e escalamos com segurança."</p>
-                    <div class="testimonial-result">
-                        <strong>+150% em conversão</strong> do funil
-                    </div>
+                
+                <div class="credential-card">
+                    <div class="credential-icon">🎓</div>
+                    <h4>Certificações Google & Meta</h4>
+                    <p>Certificados oficiais nas principais plataformas de anúncios online</p>
+                </div>
+                
+                <div class="credential-card">
+                    <div class="credential-icon">🎯</div>
+                    <h4>Metodologia Própria</h4>
+                    <p>Sistema validado e testado que traz previsibilidade aos resultados</p>
+                </div>
+                
+                <div class="credential-card">
+                    <div class="credential-icon">👤</div>
+                    <h4>Atendimento Personalizado</h4>
+                    <p>Cada empresa é única e merece estratégias personalizadas para seu mercado</p>
+                </div>
+                
+                <div class="credential-card">
+                    <div class="credential-icon">📊</div>
+                    <h4>Foco em ROI</h4>
+                    <p>Nosso objetivo é simples: fazer seu investimento gerar mais dinheiro do que custou</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ABOUT -->
     <section class="about">
         <div class="container">
             <h2 class="section-title">Quem Está Por Trás da uResult</h2>
             <div class="about-content">
-                <div class="about-image">OA</div>
+                <div class="about-image-container">
+                    <img src="sua-foto.jpg" alt="Otavio Andrade - Fundador uResult" class="about-image">
+                </div>
                 <div class="about-text">
                     <h3>Otavio Andrade</h3>
-                    <p>Fundador da uResult e especialista em marketing digital e estratégias de vendas.</p>
+                    <p>Fundador da uResult e especialista em tráfego pago e estratégias de vendas online.</p>
                     
                     <div class="about-highlight">
-                        <strong>Há mais de 4 anos</strong> ajudando empresários a aumentarem seus lucros de forma sustentável e escalável
+                        <strong>Há mais de 4 anos</strong> ajudando empresários a aumentarem seus lucros de forma sustentável e escalável através de anúncios online
                     </div>
                     
                     <div class="about-highlight">
-                        <strong>Já ajudou clientes a faturarem meio milhão de reais</strong> em um único mês
+                        <strong>Já ajudou clientes a faturarem meio milhão de reais</strong> em um único mês através de estratégias de tráfego pago
                     </div>
                     
-                    <p>Com experiência em transformação digital para empresas que buscam crescimento sustentável, já ajudei mais de 50 negócios a estruturarem processos escaláveis de captação e conversão.</p>
+                    <p>Com vasta experiência no mercado digital, já ajudei mais de 50 empresas de diversos segmentos a estruturarem campanhas de alta performance e processos escaláveis de aquisição de clientes.</p>
                     
-                    <div class="credentials">
-                        <div class="credential-item">
-                            <span>✓</span>
-                            <p>+50 empresas transformadas</p>
-                        </div>
-                        <div class="credential-item">
-                            <span>✓</span>
-                            <p>Especialista em Tráfego Pago (Google Ads & Facebook Ads)</p>
-                        </div>
-                        <div class="credential-item">
-                            <span>✓</span>
-                            <p>Expert em Funis de Vendas e Automações</p>
-                        </div>
-                        <div class="credential-item">
-                            <span>✓</span>
-                            <p>Certificado em CRM e Gestão Comercial</p>
-                        </div>
-                        <div class="credential-item">
-                            <span>✓</span>
-                            <p>Aumento médio de 150% a 300% nos resultados dos clientes</p>
-                        </div>
-                    </div>
+                    <p>Minha missão é simples: fazer sua empresa crescer de forma previsível usando o poder dos anúncios online nas maiores plataformas do mundo.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- URGENCY -->
-    <section class="urgency">
+    <section class="testimonials">
         <div class="container">
-            <h2>⚠️ ATENÇÃO: Vagas Limitadas</h2>
-            <p>Para garantir a qualidade do atendimento e análise personalizada,<br>realizo apenas <strong>10 diagnósticos por semana</strong>.</p>
-            <p class="spots-left">🔥 6 vagas restantes esta semana</p>
-            <a href="#form" class="cta-button" style="background: #0A0A0A; color: #FFFFFF;">GARANTIR MINHA VAGA AGORA</a>
+            <h2 class="section-title">Resultados Reais de Clientes Reais</h2>
+            <p class="section-subtitle">
+                Veja o que nossos parceiros de negócios estão conquistando com nossas estratégias
+            </p>
+            
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <div class="testimonial-avatar">CI</div>
+                        <div class="testimonial-info">
+                            <h4>Cliente - Setor Imobiliário</h4>
+                            <p>Vendas de Imóveis</p>
+                        </div>
+                    </div>
+                    <p class="testimonial-text">
+                        "Leads bem qualificados. Temos ainda propostas em andamento, visitas agendadas... foram mais de 170 leads recebidos!"
+                    </p>
+                    <div class="testimonial-result">
+                        <strong>💰 R$ 3.136.000 em vendas</strong><br>
+                        📍 Setor: Imobiliário
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <div class="testimonial-avatar">LV</div>
+                        <div class="testimonial-info">
+                            <h4>Cliente - Loja de Veículos</h4>
+                            <p>Comércio Automotivo</p>
+                        </div>
+                    </div>
+                    <p class="testimonial-text">
+                        "Record de vendas esse mês! 22 vendas através do tráfego pago."
+                    </p>
+                    <div class="testimonial-result">
+                        <strong>🚗 22 vendas em um mês</strong><br>
+                        📍 Setor: Automotivo
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <div class="testimonial-avatar">EC</div>
+                        <div class="testimonial-info">
+                            <h4>Cliente - E-commerce</h4>
+                            <p>Loja Online</p>
+                        </div>
+                    </div>
+                    <p class="testimonial-text">
+                        "Batemos 100 mil visualizações! O mais visualizado orgânico que tivemos."
+                    </p>
+                    <div class="testimonial-result">
+                        <strong>📊 100k+ visualizações</strong><br>
+                        📍 Setor: E-commerce
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <div class="testimonial-avatar">CO</div>
+                        <div class="testimonial-info">
+                            <h4>Cliente - Corretor</h4>
+                            <p>Mercado Imobiliário</p>
+                        </div>
+                    </div>
+                    <p class="testimonial-text">
+                        "Leads qualificados, venda fechada e contrato em andamento. Tráfego bem feito!"
+                    </p>
+                    <div class="testimonial-result">
+                        <strong>🏠 Vendas fechadas + contratos</strong><br>
+                        📍 Setor: Imóveis
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <div class="testimonial-avatar">VA</div>
+                        <div class="testimonial-info">
+                            <h4>Cliente - Veículos</h4>
+                            <p>Loja Automotiva</p>
+                        </div>
+                    </div>
+                    <p class="testimonial-text">
+                        "5 carros vendidos através do tráfego pago! Leads de qualidade que realmente convertem."
+                    </p>
+                    <div class="testimonial-result">
+                        <strong>🚘 5 carros vendidos</strong><br>
+                        📍 Setor: Automotivo
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <div class="testimonial-avatar">LI</div>
+                        <div class="testimonial-info">
+                            <h4>Cliente - Lives Online</h4>
+                            <p>Produtor de Conteúdo</p>
+                        </div>
+                    </div>
+                    <p class="testimonial-text">
+                        "100 mil visualizações na live! Alcance incrível com as estratégias de tráfego."
+                    </p>
+                    <div class="testimonial-result">
+                        <strong>📺 100k visualizações</strong><br>
+                        📍 Setor: Digital
+                    </div>
+                </div>
+            </div>
+
+            <div class="cta-section">
+                <a href="#form" class="cta-button">QUERO RESULTADOS ASSIM</a>
+            </div>
         </div>
     </section>
 
-    <!-- FORM -->
-    <section id="form" class="form-section">
+    <section class="for-who" style="padding: 80px 0; background: #FFFFFF;">
         <div class="container">
-            <h2 class="section-title">Garanta Seu Diagnóstico Gratuito</h2>
-            <div class="form-container">
+            <h2 class="section-title">Este Serviço é Para Você Que:</h2>
+            
+            <div style="max-width: 700px; margin: 50px auto 0;">
+                <div style="display: flex; align-items: flex-start; margin-bottom: 25px; background: #F8F9FA; padding: 25px; border-radius: 8px; border-left: 4px solid #0047AB;">
+                    <span style="font-size: 24px; color: #0047AB; margin-right: 15px;">✓</span>
+                    <p style="font-size: 18px; color: #333333;">Quer atrair mais clientes qualificados para seu negócio todos os dias</p>
+                </div>
+                <div style="display: flex; align-items: flex-start; margin-bottom: 25px; background: #F8F9FA; padding: 25px; border-radius: 8px; border-left: 4px solid #0047AB;">
+                    <span style="font-size: 24px; color: #0047AB; margin-right: 15px;">✓</span>
+                    <p style="font-size: 18px; color: #333333;">Já investe em marketing mas não vê retorno consistente e previsível</p>
+                </div>
+                <div style="display: flex; align-items: flex-start; margin-bottom: 25px; background: #F8F9FA; padding: 25px; border-radius: 8px; border-left: 4px solid #0047AB;">
+                    <span style="font-size: 24px; color: #0047AB; margin-right: 15px;">✓</span>
+                    <p style="font-size: 18px; color: #333333;">Deseja escalar suas vendas de forma sustentável e lucrativa</p>
+                </div>
+                <div style="display: flex; align-items: flex-start; margin-bottom: 25px; background: #F8F9FA; padding: 25px; border-radius: 8px; border-left: 4px solid #0047AB;">
+                    <span style="font-size: 24px; color: #0047AB; margin-right: 15px;">✓</span>
+                    <p style="font-size: 18px; color: #333333;">Quer aparecer no Google quando seu cliente buscar pelo seu produto</p>
+                </div>
+                <div style="display: flex; align-items: flex-start; margin-bottom: 25px; background: #F8F9FA; padding: 25px; border-radius: 8px; border-left: 4px solid #0047AB;">
+                    <span style="font-size: 24px; color: #0047AB; margin-right: 15px;">✓</span>
+                    <p style="font-size: 18px; color: #333333;">Busca construir autoridade nas redes sociais e gerar reconhecimento</p>
+                </div>
+                <div style="display: flex; align-items: flex-start; margin-bottom: 25px; background: #F8F9FA; padding: 25px; border-radius: 8px; border-left: 4px solid #0047AB;">
+                    <span style="font-size: 24px; color: #0047AB; margin-right: 15px;">✓</span>
+                    <p style="font-size: 18px; color: #333333;">Quer aproveitar o poder dos anúncios online para crescer mais rápido</p>
+                </div>
+            </div>
+
+            <div class="cta-section">
+                <a href="#form" class="cta-button">SIM, ESSE SOU EU!</a>
+            </div>
+        </div>
+    </section>
+
+    <section style="padding: 80px 0; background: #F8F9FA;">
+        <div class="container">
+            <h2 class="section-title">Perguntas Frequentes</h2>
+            
+            <div style="max-width: 800px; margin: 50px auto 0;">
+                <div style="background: #FFFFFF; padding: 30px; margin-bottom: 20px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);">
+                    <p style="font-size: 18px; font-weight: 700; margin-bottom: 15px; color: #0047AB;">❓ Quanto custa o serviço de gestão de tráfego pago?</p>
+                    <p style="font-size: 16px; color: #666666; line-height: 1.6;">O investimento varia de acordo com o tamanho do seu negócio e objetivos. Entre em contato para receber uma proposta personalizada. Trabalhamos com diferentes pacotes para atender desde pequenas até grandes empresas.</p>
+                </div>
+                
+                <div style="background: #FFFFFF; padding: 30px; margin-bottom: 20px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);">
+                    <p style="font-size: 18px; font-weight: 700; margin-bottom: 15px; color: #0047AB;">❓ Quanto tempo leva para ver resultados?</p>
+                    <p style="font-size: 16px; color: #666666; line-height: 1.6;">Os primeiros leads começam a chegar nas primeiras semanas. Resultados consistentes e otimizados geralmente aparecem entre 30-60 dias, período em que testamos e ajustamos as campanhas para máxima performance.</p>
+                </div>
+                
+                <div style="background: #FFFFFF; padding: 30px; margin-bottom: 20px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);">
+                    <p style="font-size: 18px; font-weight: 700; margin-bottom: 15px; color: #0047AB;">❓ Vocês trabalham com qual tipo de empresa?</p>
+                    <p style="font-size: 16px; color: #666666; line-height: 1.6;">Atendemos empresas de diversos segmentos: e-commerce, serviços, varejo, imobiliário, automotivo, saúde, educação e mais. Se sua empresa vende online ou pode receber leads pela internet, podemos ajudar.</p>
+                </div>
+                
+                <div style="background: #FFFFFF; padding: 30px; margin-bottom: 20px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);">
+                    <p style="font-size: 18px; font-weight: 700; margin-bottom: 15px; color: #0047AB;">❓ Preciso ter um site para anunciar?</p>
+                    <p style="font-size: 16px; color: #666666; line-height: 1.6;">Não necessariamente. Podemos criar landing pages específicas para suas campanhas ou usar WhatsApp Business e redes sociais como destino dos anúncios, dependendo da sua estratégia.</p>
+                </div>
+                
+                <div style="background: #FFFFFF; padding: 30px; margin-bottom: 20px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);">
+                    <p style="font-size: 18px; font-weight: 700; margin-bottom: 15px; color: #0047AB;">❓ Quanto preciso investir em anúncios?</p>
+                    <p style="font-size: 16px; color: #666666; line-height: 1.6;">O investimento em mídia (além da gestão) varia conforme seu mercado e objetivos. Recomendamos começar com pelo menos R$ 1.500-3.000/mês em anúncios para ter dados suficientes para otimização.</p>
+                </div>
+                
+                <div style="background: #FFFFFF; padding: 30px; margin-bottom: 20px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);">
+                    <p style="font-size: 18px; font-weight: 700; margin-bottom: 15px; color: #0047AB;">❓ Como funciona o contrato?</p>
+                    <p style="font-size: 16px; color: #666666; line-height: 1.6;">Trabalhamos com contratos mensais sem fidelidade. Acreditamos que bons resultados falam por si. Você fica conosco porque está satisfeito, não por obrigação contratual.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="form" style="padding: 80px 0; background: linear-gradient(135deg, #0047AB 0%, #002866 100%); color: #FFFFFF;">
+        <div class="container">
+            <h2 class="section-title" style="color: #FFFFFF;">Vamos Conversar Sobre Seu Negócio?</h2>
+            <p class="section-subtitle" style="color: rgba(255, 255, 255, 0.9);">
+                Preencha o formulário abaixo e entraremos em contato para entender seus desafios e apresentar como podemos ajudar sua empresa a crescer
+            </p>
+            
+            <div style="max-width: 600px; margin: 50px auto 0; background: #FFFFFF; padding: 50px; border-radius: 12px; box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);">
                 <form action="https://formsubmit.co/otavioandrade.mkt@gmail.com" method="POST">
-                    <!-- Configurações FormSubmit -->
                     <input type="text" name="_honey" style="display:none">
                     <input type="hidden" name="_captcha" value="false">
                     <input type="hidden" name="_next" value="https://otavioandrademidia-ops.github.io/uresult-landing/obrigado.html">
-                    <input type="hidden" name="_subject" value="Novo Lead - Diagnóstico Gratuito uResult">
+                    <input type="hidden" name="_subject" value="Novo Lead - uResult Tráfego Pago">
                     <input type="hidden" name="_template" value="table">
                     
-                    <div class="form-group">
-                        <label for="nome">Nome Completo *</label>
-                        <input type="text" id="nome" name="nome" required>
+                    <div style="margin-bottom: 25px;">
+                        <label style="display: block; margin-bottom: 8px; font-weight: 600; color: #333333;">Nome Completo *</label>
+                        <input type="text" name="nome" required style="width: 100%; padding: 15px; background: #F8F9FA; border: 2px solid #E0E0E0; border-radius: 8px; color: #333333; font-size: 16px; font-family: 'Inter', sans-serif;">
                     </div>
                     
-                    <div class="form-group">
-                        <label for="email">E-mail *</label>
-                        <input type="email" id="email" name="email" required>
+                    <div style="margin-bottom: 25px;">
+                        <label style="display: block; margin-bottom: 8px; font-weight: 600; color: #333333;">E-mail *</label>
+                        <input type="email" name="email" required style="width: 100%; padding: 15px; background: #F8F9FA; border: 2px solid #E0E0E0; border-radius: 8px; color: #333333; font-size: 16px; font-family: 'Inter', sans-serif;">
                     </div>
                     
-                    <div class="form-group">
-                        <label for="whatsapp">WhatsApp (com DDD) *</label>
-                        <input type="tel" id="whatsapp" name="whatsapp" placeholder="(24) 99999-9999" required>
+                    <div style="margin-bottom: 25px;">
+                        <label style="display: block; margin-bottom: 8px; font-weight: 600; color: #333333;">WhatsApp (com DDD) *</label>
+                        <input type="tel" name="whatsapp" placeholder="(24) 99999-9999" required style="width: 100%; padding: 15px; background: #F8F9FA; border: 2px solid #E0E0E0; border-radius: 8px; color: #333333; font-size: 16px; font-family: 'Inter', sans-serif;">
                     </div>
                     
-                    <div class="form-group">
-                        <label for="empresa">Nome da Empresa *</label>
-                        <input type="text" id="empresa" name="empresa" required>
+                    <div style="margin-bottom: 25px;">
+                        <label style="display: block; margin-bottom: 8px; font-weight: 600; color: #333333;">Nome da Empresa *</label>
+                        <input type="text" name="empresa" required style="width: 100%; padding: 15px; background: #F8F9FA; border: 2px solid #E0E0E0; border-radius: 8px; color: #333333; font-size: 16px; font-family: 'Inter', sans-serif;">
                     </div>
                     
-                    <div class="form-group">
-                        <label for="faturamento">Faturamento Mensal Aproximado *</label>
-                        <select id="faturamento" name="faturamento" required>
+                    <div style="margin-bottom: 25px;">
+                        <label style="display: block; margin-bottom: 8px; font-weight: 600; color: #333333;">Segmento *</label>
+                        <select name="segmento" required style="width: 100%; padding: 15px; background: #F8F9FA; border: 2px solid #E0E0E0; border-radius: 8px; color: #333333; font-size: 16px; font-family: 'Inter', sans-serif;">
                             <option value="">Selecione...</option>
-                            <option value="ate-10k">Até R$ 10.000</option>
-                            <option value="10k-30k">R$ 10.000 - R$ 30.000</option>
-                            <option value="30k-50k">R$ 30.000 - R$ 50.000</option>
-                            <option value="50k-100k">R$ 50.000 - R$ 100.000</option>
-                            <option value="100k-mais">Acima de R$ 100.000</option>
+                            <option value="ecommerce">E-commerce</option>
+                            <option value="servicos">Serviços</option>
+                            <option value="varejo">Varejo</option>
+                            <option value="imoveis">Imobiliário</option>
+                            <option value="automotivo">Automotivo</option>
+                            <option value="saude">Saúde</option>
+                            <option value="educacao">Educação</option>
+                            <option value="outro">Outro</option>
                         </select>
                     </div>
                     
-                    <div class="form-group">
-                        <label for="desafio">Qual seu principal desafio atual? *</label>
-                        <select id="desafio" name="desafio" required>
-                            <option value="">Selecione...</option>
-                            <option value="gerar-leads">Gerar mais leads qualificados</option>
-                            <option value="melhorar-roi">Melhorar ROI do tráfego pago</option>
-                            <option value="estruturar-funil">Estruturar funil de vendas</option>
-                            <option value="escalar-vendas">Escalar vendas de forma previsível</option>
-                            <option value="aumentar-conversao">Aumentar taxa de conversão</option>
-                            <option value="outro">Outro desafio</option>
-                        </select>
+                    <div style="margin-bottom: 25px;">
+                        <label style="display: block; margin-bottom: 8px; font-weight: 600; color: #333333;">Conte sobre seu negócio</label>
+                        <textarea name="mensagem" placeholder="Quanto mais detalhes, melhor..." style="width: 100%; padding: 15px; background: #F8F9FA; border: 2px solid #E0E0E0; border-radius: 8px; color: #333333; font-size: 16px; font-family: 'Inter', sans-serif; min-height: 120px; resize: vertical;"></textarea>
                     </div>
                     
-                    <div class="form-group">
-                        <label for="mensagem">Conte mais sobre sua empresa e objetivos</label>
-                        <textarea id="mensagem" name="mensagem" placeholder="Quanto mais detalhes, melhor será seu diagnóstico personalizado..."></textarea>
-                    </div>
+                    <button type="submit" class="submit-button" style="width: 100%; padding: 20px; background: #0047AB; color: #FFFFFF; border: none; border-radius: 50px; font-size: 18px; font-weight: 700; cursor: pointer;">QUERO AUMENTAR MINHAS VENDAS</button>
                     
-                    <button type="submit" class="submit-button">AGENDAR MEU DIAGNÓSTICO GRATUITO</button>
-                    
-                    <p class="form-footer">🔒 Seus dados estão seguros | 💬 Resposta em até 2h</p>
+                    <p style="text-align: center; margin-top: 20px; font-size: 14px; color: #333333;">🔒 Seus dados estão seguros</p>
                 </form>
             </div>
         </div>
     </section>
 
-    <!-- FAQ -->
-    <section class="faq">
+    <footer style="background: #1A1A1A; padding: 40px 0; text-align: center; color: #FFFFFF;">
         <div class="container">
-            <h2 class="section-title">Perguntas Frequentes</h2>
-            <div class="faq-list">
-                <div class="faq-item">
-                    <p class="faq-question">❓ É realmente 100% gratuito?</p>
-                    <p class="faq-answer">Sim! Não tem nenhum custo, taxa ou pegadinha. Meu objetivo é entender seu negócio e mostrar como posso ajudar a escalar suas vendas.</p>
-                </div>
-                <div class="faq-item">
-                    <p class="faq-question">❓ Quanto tempo dura o diagnóstico?</p>
-                    <p class="faq-answer">A conversa estratégica dura entre 30-45 minutos. Depois, você recebe o documento completo do diagnóstico em até 48 horas.</p>
-                </div>
-                <div class="faq-item">
-                    <p class="faq-question">❓ Vai tentar me vender algo na chamada?</p>
-                    <p class="faq-answer">Não! O foco é 100% em entender seus desafios e entregar valor real. Se fizer sentido trabalharmos juntos, apresento as opções. Mas zero pressão de vendas.</p>
-                </div>
-                <div class="faq-item">
-                    <p class="faq-question">❓ Funciona para o meu segmento?</p>
-                    <p class="faq-answer">Já trabalhei com diversos segmentos: e-commerce, infoprodutos, serviços B2B, consultorias, saúde e mais. As estratégias de tráfego e funil são adaptáveis a qualquer negócio.</p>
-                </div>
-                <div class="faq-item">
-                    <p class="faq-question">❓ E se eu não puder implementar sozinho?</p>
-                    <p class="faq-answer">Sem problemas! Você recebe o diagnóstico completo e pode implementar por conta ou, se preferir, posso fazer a gestão completa das suas campanhas. Você decide o melhor caminho.</p>
-                </div>
-                <div class="faq-item">
-                    <p class="faq-question">❓ Quando vou receber o retorno?</p>
-                    <p class="faq-answer">Respondo todos os formulários em até 2 horas em horário comercial. O agendamento da conversa é feito logo em seguida via WhatsApp.</p>
-                </div>
-                <div class="faq-item">
-                    <p class="faq-question">❓ Qual a diferença desse diagnóstico?</p>
-                    <p class="faq-answer">Diferente de consultorias genéricas, foco especificamente em tráfego pago e funis de vendas otimizados. Com mais de 4 anos de experiência e +50 clientes atendidos, sei exatamente o que funciona.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- FOOTER -->
-    <footer>
-        <div class="container">
-            <p>&copy; 2026 uResult - Todos os direitos reservados</p>
-            <div class="social-links">
-                <a href="https://instagram.com/euotavioandrade" target="_blank">📱 Instagram</a>
-                <a href="mailto:otavioandrade.mkt@gmail.com">✉️ E-mail</a>
-                <a href="https://wa.me/5524998374977?text=Olá!%20Vim%20da%20landing%20page%20e%20quero%20fazer%20meu%20diagnóstico" target="_blank">💬 WhatsApp</a>
+            <p style="font-size: 14px; opacity: 0.8;">&copy; 2026 uResult - Todos os direitos reservados</p>
+            <div style="margin-top: 20px;">
+                <a href="https://instagram.com/euotavioandrade" target="_blank" style="color: #0047AB; text-decoration: none; margin: 0 15px; font-size: 16px;">📱 Instagram</a>
+                <a href="mailto:otavioandrade.mkt@gmail.com" style="color: #0047AB; text-decoration: none; margin: 0 15px; font-size: 16px;">✉️ E-mail</a>
+                <a href="https://wa.me/5524998374977" target="_blank" style="color: #0047AB; text-decoration: none; margin: 0 15px; font-size: 16px;">💬 WhatsApp</a>
             </div>
         </div>
     </footer>
 
-    <!-- WHATSAPP FLOAT BUTTON -->
-    <a href="https://wa.me/5524998374977?text=Olá!%20Vim%20da%20landing%20page%20e%20quero%20saber%20mais%20sobre%20o%20diagnóstico%20gratuito" class="whatsapp-float" target="_blank">
+    <a href="https://wa.me/5524998374977?text=Olá!%20Vim%20do%20site%20e%20quero%20saber%20mais%20sobre%20tráfego%20pago" class="whatsapp-float" target="_blank">
         💬
     </a>
 
-    <!-- SMOOTH SCROLL -->
     <script>
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
@@ -1003,12 +980,6 @@
                     behavior: 'smooth'
                 });
             });
-        });
-        
-        // Track form submission
-        document.querySelector('form').addEventListener('submit', function() {
-            // You can add Google Analytics or Meta Pixel tracking here
-            console.log('Form submitted');
         });
     </script>
 
