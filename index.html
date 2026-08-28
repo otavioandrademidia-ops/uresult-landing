@@ -17,6 +17,11 @@
             padding: 0;
             box-sizing: border-box;
         }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 110px;
+        }
         
         body {
             font-family: 'Poppins', sans-serif;
@@ -211,13 +216,14 @@
         
         /* METHOD SECTION - ABA 2 */
         .method-section {
-            padding: 100px 0;
+            padding: 72px 0;
             background: #0a0a0a;
+            scroll-margin-top: 100px;
         }
         
         .method-intro {
             text-align: center;
-            margin-bottom: 80px;
+            margin-bottom: 44px;
         }
         
         .section-tag {
@@ -253,9 +259,9 @@
         .method-block {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 80px;
+            gap: 56px;
             align-items: center;
-            margin-bottom: 100px;
+            margin-bottom: 80px;
         }
         
         .method-block:last-child {
@@ -271,7 +277,7 @@
         }
         
         .method-content {
-            padding: 40px;
+            padding: 24px;
         }
         
         .method-content h3 {
@@ -292,7 +298,7 @@
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 30px;
-            margin-top: 40px;
+            margin-top: 28px;
         }
         
         .stat-item {
@@ -317,16 +323,24 @@
         }
         
         .method-mockup {
-            background: #000000;
+            background: #03050a;
             border-radius: 20px;
-            padding: 40px;
+            padding: 18px;
             border: 1px solid #1a1a1a;
-            min-height: 500px;
+            min-height: 410px;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 64px;
+            overflow: hidden;
             box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+        }
+
+        .method-mockup img {
+            display: block;
+            width: 100%;
+            height: 374px;
+            object-fit: contain;
+            border-radius: 14px;
         }
         
         /* TESTIMONIALS - ABA 3 */
@@ -427,31 +441,31 @@
         
         /* URESULT METHOD - ABA 4 PARTE 2 */
         .uresult-section {
-            padding: 100px 0;
+            padding: 72px 0;
             background: #000000;
+            scroll-margin-top: 100px;
+        }
+
+        .uresult-section > .container {
+            max-width: 1440px;
         }
         
         .uresult-grid {
             display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 30px;
-            margin-top: 60px;
-        }
-        
-        .uresult-row-2 {
-            grid-template-columns: repeat(3, 1fr);
-            max-width: 900px;
-            margin: 30px auto 0;
+            grid-template-columns: repeat(7, minmax(0, 1fr));
+            gap: 16px;
+            margin-top: 36px;
         }
         
         .uresult-card {
             background: #0a0a0a;
-            padding: 40px 30px;
+            padding: 30px 18px 26px;
             border-radius: 20px;
             border: 1px solid #1a1a1a;
             transition: all 0.3s ease;
             position: relative;
             text-align: center;
+            min-height: 326px;
         }
         
         .uresult-card::before {
@@ -473,14 +487,14 @@
         }
         
         .uresult-letter {
-            font-size: 48px;
+            font-size: 42px;
             font-weight: 900;
             color: #0047AB;
             margin-bottom: 15px;
         }
         
         .uresult-tag {
-            font-size: 11px;
+            font-size: 10px;
             text-transform: uppercase;
             color: #0047AB;
             letter-spacing: 1px;
@@ -489,14 +503,14 @@
         }
         
         .uresult-card h4 {
-            font-size: 20px;
+            font-size: 18px;
             font-weight: 700;
             margin-bottom: 15px;
             color: #FFFFFF;
         }
         
         .uresult-card p {
-            font-size: 14px;
+            font-size: 13px;
             color: #888;
             line-height: 1.6;
         }
@@ -876,6 +890,12 @@
         }
         
         /* RESPONSIVE */
+        @media (max-width: 1440px) {
+            .uresult-grid {
+                grid-template-columns: repeat(4, minmax(0, 1fr));
+            }
+        }
+
         @media (max-width: 1024px) {
             .method-block {
                 grid-template-columns: 1fr;
@@ -887,10 +907,6 @@
             }
             
             .uresult-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-            
-            .uresult-row-2 {
                 grid-template-columns: repeat(2, 1fr);
             }
         }
@@ -1060,8 +1076,12 @@
 
             .method-mockup {
                 min-height: 190px;
-                padding: 24px;
-                font-size: 54px;
+                padding: 12px;
+            }
+
+            .method-mockup img {
+                height: auto;
+                max-height: 300px;
             }
             
             .proof-grid {
@@ -1077,8 +1097,7 @@
                 grid-template-columns: 1fr;
             }
             
-            .uresult-grid,
-            .uresult-row-2 {
+            .uresult-grid {
                 grid-template-columns: 1fr;
             }
 
@@ -1091,10 +1110,6 @@
             .benefits-grid,
             .uresult-grid {
                 gap: 16px;
-            }
-
-            .uresult-row-2 {
-                margin-top: 16px;
             }
 
             .benefit-card {
@@ -1344,7 +1359,7 @@
                     </div>
                 </div>
                 <div class="method-mockup">
-                    🔍
+                    <img src="assets/google-presence.webp" alt="Ilustração de presença nas buscas e análise de desempenho" width="1200" height="800" loading="lazy" decoding="async">
                 </div>
             </div>
             
@@ -1367,7 +1382,7 @@
                     </div>
                 </div>
                 <div class="method-mockup">
-                    📱
+                    <img src="assets/social-presence.webp" alt="Ilustração de campanhas nas redes sociais e conexão com públicos" width="1200" height="800" loading="lazy" decoding="async">
                 </div>
             </div>
         </div>
@@ -1477,7 +1492,7 @@
             <span class="section-tag">NOSSA METODOLOGIA EXCLUSIVA</span>
             <h2 class="section-title">O Método uResult</h2>
             
-            <!-- Primeira linha: 4 cards -->
+            <!-- Os sete pilares do Método uResult -->
             <div class="uresult-grid">
                 <div class="uresult-card">
                     <div class="uresult-letter">U</div>
@@ -1506,10 +1521,7 @@
                     <h4>Sistema</h4>
                     <p>Colocamos o sistema em movimento com testes, ajustes e melhorias constantes para evoluir a performance sem depender de sorte.</p>
                 </div>
-            </div>
-            
-            <!-- Segunda linha: 3 cards -->
-            <div class="uresult-grid uresult-row-2">
+
                 <div class="uresult-card">
                     <div class="uresult-letter">U</div>
                     <div class="uresult-tag">DECISÃO BASEADA EM DADOS</div>
