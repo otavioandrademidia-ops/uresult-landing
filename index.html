@@ -213,6 +213,69 @@
             letter-spacing: 0.5px;
             line-height: 1.4;
         }
+
+        /* PROCESS SUMMARY */
+        .process-section {
+            padding: 84px 0;
+            background: #000000;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            scroll-margin-top: 100px;
+        }
+
+        .process-intro {
+            max-width: 760px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .process-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 24px;
+            margin-top: 44px;
+        }
+
+        .process-card {
+            position: relative;
+            min-height: 230px;
+            overflow: hidden;
+            padding: 34px;
+            border: 1px solid #1a1a1a;
+            border-radius: 18px;
+            background: linear-gradient(145deg, #0d111a 0%, #080808 72%);
+            transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .process-card:hover {
+            transform: translateY(-6px);
+            border-color: rgba(0, 102, 255, 0.55);
+            box-shadow: 0 18px 45px rgba(0, 71, 171, 0.16);
+        }
+
+        .process-number {
+            display: inline-grid;
+            width: 48px;
+            height: 48px;
+            margin-bottom: 24px;
+            place-items: center;
+            border-radius: 14px;
+            background: rgba(0, 102, 255, 0.14);
+            color: #1674ff;
+            font-size: 17px;
+            font-weight: 800;
+        }
+
+        .process-card h3 {
+            margin-bottom: 13px;
+            font-size: 22px;
+            line-height: 1.25;
+        }
+
+        .process-card p {
+            color: #999;
+            font-size: 15px;
+            line-height: 1.7;
+        }
         
         /* METHOD SECTION - ABA 2 */
         .method-section {
@@ -1221,6 +1284,11 @@
             text-align: center;
             margin-top: 60px;
         }
+
+        .method-cta {
+            margin-top: -12px;
+            text-align: center;
+        }
         
         /* RESPONSIVE */
         @media (max-width: 1440px) {
@@ -1233,6 +1301,10 @@
             .method-block {
                 grid-template-columns: 1fr;
                 gap: 40px;
+            }
+
+            .process-grid {
+                gap: 18px;
             }
             
             .method-block.reverse {
@@ -1342,12 +1414,23 @@
             }
 
             .method-section,
+            .process-section,
             .testimonials-section,
             .benefits-section,
             .uresult-section,
             .faq-section,
             .contact-section {
                 padding: 64px 0;
+            }
+
+            .process-grid {
+                grid-template-columns: 1fr;
+                margin-top: 34px;
+            }
+
+            .process-card {
+                min-height: auto;
+                padding: 28px;
             }
 
             .method-intro {
@@ -1639,7 +1722,7 @@
                     <div class="logo">uResult</div>
                     <div class="logo-subtitle">Gestão de Tráfego Pago</div>
                 </div>
-                <a href="#form" class="header-cta">FALAR COM ESPECIALISTA</a>
+                <a href="https://wa.me/5524999609726?text=Ol%C3%A1%21%20Vim%20do%20site%20da%20uResult%20e%20quero%20agendar%20um%20diagn%C3%B3stico." class="header-cta" target="_blank" rel="noopener noreferrer">FALAR COM ESPECIALISTA</a>
             </div>
         </div>
     </header>
@@ -1649,12 +1732,12 @@
         <div class="container">
             <div class="hero-content">
                 <span class="hero-tag">Tráfego Pago Estratégico</span>
-                <h1>Sua empresa já fatura. Agora, precisa de tráfego pago estratégico para alcançar mais clientes tanto nos canais onde passam mais tempo quanto no momento em que pesquisam pelo seu produto ou serviço e, assim, escalar suas vendas no ritmo desejado.</h1>
+                <h1>Faço sua empresa alcançar mais pessoas, conquistar mais clientes e vender mais com tráfego pago estratégico</h1>
                 <p class="hero-subtitle">
-                    Faço anúncios online totalmente personalizados para o seu negócio, de acordo com a sua realidade.
+                    Se sua empresa já fatura e você acredita que pode faturar ainda mais, clique no botão abaixo e fale conosco pelo WhatsApp.
                 </p>
                 <div class="hero-ctas">
-                    <a href="#form" class="btn-primary">QUERO AUMENTAR MINHAS VENDAS</a>
+                    <a href="https://wa.me/5524999609726?text=Ol%C3%A1%21%20Vim%20do%20site%20da%20uResult%20e%20quero%20escalar%20minhas%20vendas%20com%20tr%C3%A1fego%20pago." class="btn-primary" target="_blank" rel="noopener noreferrer">QUERO ESCALAR MINHAS VENDAS</a>
                 </div>
             </div>
         </div>
@@ -1680,6 +1763,35 @@
                         <p>Certificações</p>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROCESS SUMMARY -->
+    <section class="process-section" id="como-funciona">
+        <div class="container">
+            <div class="process-intro">
+                <span class="section-tag">COMO FUNCIONA</span>
+                <h2 class="section-title">Da estratégia à escala em três etapas</h2>
+                <p class="section-subtitle">Um processo claro para transformar objetivos em campanhas, aprendizado e evolução contínua.</p>
+            </div>
+
+            <div class="process-grid">
+                <article class="process-card">
+                    <span class="process-number">01</span>
+                    <h3>Diagnóstico</h3>
+                    <p>Entendemos o cenário da empresa, a oferta, o público e os objetivos.</p>
+                </article>
+                <article class="process-card">
+                    <span class="process-number">02</span>
+                    <h3>Estrutura e campanhas</h3>
+                    <p>Organizamos páginas, rastreamento, anúncios e o processo comercial.</p>
+                </article>
+                <article class="process-card">
+                    <span class="process-number">03</span>
+                    <h3>Análise e otimização</h3>
+                    <p>Acompanhamos os dados, realizamos testes e ajustamos a estratégia continuamente.</p>
+                </article>
             </div>
         </div>
     </section>
@@ -1764,6 +1876,10 @@
                         <div class="search-demo__lines"><span></span><span></span><span></span></div>
                     </div>
                 </div>
+            </div>
+
+            <div class="method-cta">
+                <a href="https://wa.me/5524999609726?text=Ol%C3%A1%21%20Vim%20do%20site%20da%20uResult%20e%20quero%20entender%20como%20o%20tr%C3%A1fego%20pago%20pode%20ajudar%20minha%20empresa%20a%20escalar." class="btn-primary" target="_blank" rel="noopener noreferrer">QUERO ESCALAR MINHAS VENDAS</a>
             </div>
         </div>
     </section>
@@ -1925,7 +2041,7 @@
             </div>
             
             <div class="cta-section">
-                <a href="#form" class="btn-primary">QUERO APLICAR O MÉTODO URESULT</a>
+                <a href="https://wa.me/5524999609726?text=Ol%C3%A1%21%20Conheci%20o%20M%C3%A9todo%20uResult%20no%20site%20e%20quero%20saber%20como%20ele%20pode%20ser%20aplicado%20na%20minha%20empresa." class="btn-primary" target="_blank" rel="noopener noreferrer">QUERO APLICAR O MÉTODO URESULT</a>
             </div>
         </div>
     </section>
@@ -2121,9 +2237,12 @@
                 '.hero-subtitle',
                 '.hero-ctas',
                 '.proof-item',
+                '.process-intro',
+                '.process-card',
                 '.method-intro',
                 '.method-content',
                 '.method-mockup',
+                '.method-cta',
                 '.benefit-card',
                 '.uresult-section > .container > .section-tag',
                 '.uresult-section > .container > .section-title',
