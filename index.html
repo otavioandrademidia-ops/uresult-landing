@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>uResult - Gestão de Tráfego Pago que Multiplica Seu Faturamento</title>
     <meta name="description" content="Transforme seu negócio com estratégias de tráfego pago comprovadas. Mais de 50 empresas atendidas, resultados reais e mensuráveis.">
+    <meta name="theme-color" content="#000000">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="shortcut icon" href="favicon.svg">
     
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     
@@ -697,12 +700,58 @@
         }
         
         @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 36px;
+            html {
+                scroll-padding-top: 82px;
             }
-            
+
+            .container {
+                padding: 0 18px;
+            }
+
+            header {
+                padding: 12px 0;
+            }
+
+            .logo {
+                font-size: 26px;
+                line-height: 1;
+            }
+
+            .logo-subtitle {
+                font-size: 8px;
+                letter-spacing: 1.6px;
+                margin-top: 3px;
+            }
+
+            .hero {
+                min-height: auto;
+                padding-top: 96px;
+            }
+
+            .hero-content {
+                display: block;
+            }
+
+            .hero-tag {
+                max-width: 100%;
+                padding: 8px 14px;
+                margin-bottom: 22px;
+                font-size: 11px;
+                line-height: 1.35;
+                text-align: center;
+            }
+
+            .hero h1 {
+                font-size: clamp(30px, 8.8vw, 38px);
+                line-height: 1.06;
+                margin-bottom: 22px;
+                overflow-wrap: normal;
+            }
+
             .hero-subtitle {
-                font-size: 18px;
+                font-size: 16px;
+                line-height: 1.55;
+                margin-bottom: 28px;
             }
             
             .section-title {
@@ -715,10 +764,114 @@
             
             .hero-ctas {
                 flex-direction: column;
+                gap: 12px;
+                margin-bottom: 34px;
+            }
+
+            .btn-primary {
+                width: 100%;
+                min-height: 54px;
+                padding: 15px 20px;
+                font-size: 14px;
+                line-height: 1.35;
+                text-align: center;
+            }
+
+            .hero-proof-bar {
+                padding: 30px 0;
+            }
+
+            .proof-grid {
+                gap: 22px 14px;
+            }
+
+            .proof-item h3 {
+                font-size: 34px;
+                line-height: 1.05;
+                white-space: nowrap;
+                margin-bottom: 8px;
+            }
+
+            .proof-item p {
+                font-size: 12px;
+            }
+
+            .method-section,
+            .testimonials-section,
+            .benefits-section,
+            .uresult-section,
+            .faq-section,
+            .form-section {
+                padding: 64px 0;
+            }
+
+            .method-intro {
+                margin-bottom: 44px;
+            }
+
+            .section-tag {
+                max-width: 100%;
+                padding: 8px 14px;
+                font-size: 11px;
+                line-height: 1.4;
+                text-align: center;
+            }
+
+            .section-title {
+                font-size: clamp(28px, 8vw, 34px);
+                line-height: 1.12;
+                margin-bottom: 16px;
+            }
+
+            .section-subtitle {
+                font-size: 16px;
+                line-height: 1.55;
+            }
+
+            .method-block {
+                gap: 24px;
+                margin-bottom: 64px;
+            }
+
+            .method-content {
+                padding: 0;
+            }
+
+            .method-content h3 {
+                font-size: 28px;
+                margin-bottom: 18px;
+            }
+
+            .method-content p {
+                font-size: 16px;
+                line-height: 1.65;
+                margin-bottom: 24px;
+            }
+
+            .method-stats {
+                gap: 14px;
+                margin-top: 24px;
+            }
+
+            .stat-item {
+                padding: 20px;
+            }
+
+            .stat-item strong {
+                font-size: 28px;
+                line-height: 1.15;
+            }
+
+            .method-mockup {
+                min-height: 190px;
+                padding: 24px;
+                font-size: 54px;
             }
             
             .form-container {
-                padding: 40px 25px;
+                margin-top: 32px;
+                padding: 28px 20px;
+                border-radius: 16px;
             }
             
             .proof-grid {
@@ -737,6 +890,136 @@
             .uresult-grid,
             .uresult-row-2 {
                 grid-template-columns: 1fr;
+            }
+
+            .benefits-grid,
+            .uresult-grid,
+            .faq-list {
+                margin-top: 34px;
+            }
+
+            .benefits-grid,
+            .uresult-grid {
+                gap: 16px;
+            }
+
+            .uresult-row-2 {
+                margin-top: 16px;
+            }
+
+            .benefit-card {
+                padding: 28px 22px;
+                border-radius: 16px;
+            }
+
+            .benefit-icon {
+                font-size: 28px;
+                margin-bottom: 16px;
+            }
+
+            .benefit-card h3 {
+                font-size: 21px;
+                line-height: 1.35;
+                margin-bottom: 12px;
+            }
+
+            .benefit-card p {
+                font-size: 15px;
+                line-height: 1.65;
+            }
+
+            .uresult-card {
+                padding: 30px 22px;
+                border-radius: 16px;
+            }
+
+            .uresult-letter {
+                font-size: 42px;
+                margin-bottom: 12px;
+            }
+
+            .uresult-tag,
+            .uresult-card h4 {
+                margin-bottom: 12px;
+            }
+
+            .cta-section {
+                margin-top: 34px;
+            }
+
+            .faq-item {
+                padding: 24px 20px;
+                margin-bottom: 14px;
+                border-radius: 14px;
+            }
+
+            .faq-question {
+                font-size: 17px;
+                line-height: 1.45;
+                margin-bottom: 12px;
+            }
+
+            .faq-answer {
+                font-size: 15px;
+                line-height: 1.65;
+            }
+
+            .form-group {
+                margin-bottom: 20px;
+            }
+
+            .form-group input,
+            .form-group select,
+            .form-group textarea {
+                min-height: 52px;
+                padding: 14px 15px;
+                font-size: 16px;
+            }
+
+            .form-group textarea {
+                min-height: 110px;
+            }
+
+            footer {
+                padding: 48px 0 calc(90px + env(safe-area-inset-bottom));
+            }
+
+            .footer-links {
+                display: grid;
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+                gap: 16px 12px;
+                margin-bottom: 28px;
+            }
+
+            .footer-links a {
+                font-size: 13px;
+                line-height: 1.5;
+            }
+
+            .footer-business {
+                padding: 20px 0;
+                font-size: 12px;
+                line-height: 1.7;
+                overflow-wrap: anywhere;
+            }
+
+            .footer-copy {
+                font-size: 12px;
+                line-height: 1.5;
+            }
+
+            .whatsapp-float {
+                right: 16px;
+                bottom: max(18px, env(safe-area-inset-bottom));
+                width: 54px;
+                height: 54px;
+                font-size: 25px;
+            }
+        }
+
+        @media (max-width: 380px) {
+            .hero h1 {
+                font-size: 29px;
             }
         }
     </style>
@@ -1067,7 +1350,7 @@
                 <form action="https://formsubmit.co/ed9b4b57ea2af4f8ceafa49675f2fc89" method="POST">
                     <input type="text" name="_honey" style="display:none">
                     <input type="hidden" name="_captcha" value="false">
-                    <input type="hidden" name="_next" value="https://otavioandrademidia-ops.github.io/uresult-landing/obrigado.html">
+                    <input type="hidden" name="_next" value="https://uresult.com.br/obrigado.html">
                     <input type="hidden" name="_subject" value="🚀 Novo Lead - uResult Tráfego Pago">
                     <input type="hidden" name="_template" value="table">
                     
@@ -1165,7 +1448,7 @@
     </footer>
 
     <!-- WHATSAPP FLOAT -->
-    <a href="https://wa.me/5524999609726?text=Olá!%20Vim%20do%20site%20e%20quero%20saber%20mais%20sobre%20tráfego%20pago" class="whatsapp-float" target="_blank">
+    <a href="https://wa.me/5524999609726?text=Olá!%20Vim%20do%20site%20e%20quero%20saber%20mais%20sobre%20tráfego%20pago" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Falar com a uResult pelo WhatsApp">
         💬
     </a>
 
