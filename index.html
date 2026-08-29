@@ -6,6 +6,21 @@
     <title>uResult - Tráfego Pago para Empresas que Querem Escalar</title>
     <meta name="description" content="Estratégia de tráfego pago personalizada para empresas que já faturam e querem escalar com anúncios nas redes sociais e no Google.">
     <meta name="theme-color" content="#000000">
+    <link rel="canonical" href="https://uresult.com.br/">
+    <meta property="og:locale" content="pt_BR">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="uResult">
+    <meta property="og:title" content="uResult - Tráfego Pago para Empresas que Querem Escalar">
+    <meta property="og:description" content="Estratégia de tráfego pago para empresas que já faturam e querem conquistar mais clientes e escalar as vendas.">
+    <meta property="og:url" content="https://uresult.com.br/">
+    <meta property="og:image" content="https://uresult.com.br/og-preview.png">
+    <meta property="og:image:width" content="1731">
+    <meta property="og:image:height" content="909">
+    <meta property="og:image:alt" content="uResult, tráfego pago estratégico para empresas que querem escalar">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="uResult - Tráfego Pago Estratégico">
+    <meta name="twitter:description" content="Estratégia para empresas que já faturam e querem conquistar mais clientes e escalar as vendas.">
+    <meta name="twitter:image" content="https://uresult.com.br/og-preview.png">
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <link rel="shortcut icon" href="favicon.svg">
     
@@ -183,6 +198,12 @@
             transform: translateY(-3px);
             box-shadow: 0 12px 35px rgba(0, 71, 171, 0.6);
         }
+
+        a:focus-visible,
+        button:focus-visible {
+            outline: 3px solid #58a0ff;
+            outline-offset: 4px;
+        }
         
         /* SOCIAL PROOF BAR - Agora dentro do HERO */
         .hero-proof-bar {
@@ -212,6 +233,54 @@
             color: #888;
             letter-spacing: 0.5px;
             line-height: 1.4;
+        }
+
+        /* PROBLEM */
+        .problem-section {
+            padding: 84px 0;
+            background: #070707;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .problem-intro {
+            max-width: 860px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .problem-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 22px;
+            margin-top: 42px;
+        }
+
+        .problem-card {
+            padding: 30px;
+            border: 1px solid #1a1a1a;
+            border-radius: 18px;
+            background: linear-gradient(145deg, #0d111a 0%, #080808 75%);
+        }
+
+        .problem-card span {
+            display: inline-block;
+            margin-bottom: 16px;
+            color: #1674ff;
+            font-size: 13px;
+            font-weight: 800;
+            letter-spacing: 1px;
+        }
+
+        .problem-card h3 {
+            margin-bottom: 12px;
+            font-size: 21px;
+            line-height: 1.3;
+        }
+
+        .problem-card p {
+            color: #999;
+            font-size: 15px;
+            line-height: 1.7;
         }
 
         /* PROCESS SUMMARY */
@@ -1414,6 +1483,7 @@
             }
 
             .method-section,
+            .problem-section,
             .process-section,
             .testimonials-section,
             .benefits-section,
@@ -1421,6 +1491,16 @@
             .faq-section,
             .contact-section {
                 padding: 64px 0;
+            }
+
+            .problem-grid {
+                grid-template-columns: 1fr;
+                gap: 14px;
+                margin-top: 32px;
+            }
+
+            .problem-card {
+                padding: 24px 22px;
             }
 
             .process-grid {
@@ -1569,18 +1649,35 @@
             }
 
             .uresult-card {
-                padding: 30px 22px;
+                display: grid;
+                grid-template-columns: 58px minmax(0, 1fr);
+                column-gap: 16px;
+                min-height: auto;
+                padding: 22px;
                 border-radius: 16px;
+                text-align: left;
             }
 
             .uresult-letter {
-                font-size: 42px;
-                margin-bottom: 12px;
+                grid-row: 1 / 4;
+                align-self: start;
+                font-size: 38px;
+                line-height: 1;
+                margin: 2px 0 0;
             }
 
-            .uresult-tag,
+            .uresult-tag {
+                margin-bottom: 7px;
+                line-height: 1.35;
+            }
+
             .uresult-card h4 {
-                margin-bottom: 12px;
+                margin-bottom: 8px;
+            }
+
+            .uresult-card p {
+                font-size: 13px;
+                line-height: 1.55;
             }
 
             .cta-section {
@@ -1722,7 +1819,7 @@
                     <div class="logo">uResult</div>
                     <div class="logo-subtitle">Gestão de Tráfego Pago</div>
                 </div>
-                <a href="https://wa.me/5524999609726?text=Ol%C3%A1%21%20Vim%20do%20site%20da%20uResult%20e%20quero%20agendar%20um%20diagn%C3%B3stico." class="header-cta" target="_blank" rel="noopener noreferrer">FALAR COM ESPECIALISTA</a>
+                <a href="https://wa.me/5524999609726?text=Ol%C3%A1%21%20Vim%20do%20site%20da%20uResult%20e%20quero%20agendar%20um%20diagn%C3%B3stico." class="header-cta" target="_blank" rel="noopener noreferrer">AGENDAR DIAGNÓSTICO</a>
             </div>
         </div>
     </header>
@@ -1732,7 +1829,7 @@
         <div class="container">
             <div class="hero-content">
                 <span class="hero-tag">Tráfego Pago Estratégico</span>
-                <h1>Faço sua empresa alcançar mais pessoas, conquistar mais clientes e vender mais com tráfego pago estratégico</h1>
+                <h1>Ajudamos sua empresa a alcançar mais pessoas, conquistar mais clientes e vender mais com tráfego pago estratégico</h1>
                 <p class="hero-subtitle">
                     Se sua empresa já fatura e você acredita que pode faturar ainda mais, clique no botão abaixo e fale conosco pelo WhatsApp.
                 </p>
@@ -1763,6 +1860,35 @@
                         <p>Certificações</p>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROBLEM -->
+    <section class="problem-section">
+        <div class="container">
+            <div class="problem-intro">
+                <span class="section-tag">O QUE IMPEDE A ESCALA</span>
+                <h2 class="section-title">Anúncios isolados não constroem um crescimento previsível</h2>
+                <p class="section-subtitle">Quando campanhas, páginas, rastreamento e processo comercial não trabalham juntos, o investimento perde eficiência e boas oportunidades deixam de avançar.</p>
+            </div>
+
+            <div class="problem-grid">
+                <article class="problem-card">
+                    <span>01</span>
+                    <h3>Aquisição imprevisível</h3>
+                    <p>Sem um canal estruturado de aquisição, as vendas ficam dependentes de indicação, sazonalidade e ações pontuais.</p>
+                </article>
+                <article class="problem-card">
+                    <span>02</span>
+                    <h3>Dados desconectados</h3>
+                    <p>Sem rastreamento e leitura dos dados, fica difícil saber o que gera resultado e onde o investimento está sendo desperdiçado.</p>
+                </article>
+                <article class="problem-card">
+                    <span>03</span>
+                    <h3>Oportunidades perdidas</h3>
+                    <p>Quando anúncios e atendimento comercial não estão alinhados, contatos com potencial podem não avançar até a venda.</p>
+                </article>
             </div>
         </div>
     </section>
@@ -1800,8 +1926,8 @@
     <section class="method-section">
         <div class="container">
             <div class="method-intro">
-                <span class="section-tag">NOSSO MÉTODO</span>
-                <h2 class="section-title">uResult é o nosso método para transformar estratégia em resultados</h2>
+                <span class="section-tag">ESTRATÉGIA MULTICANAL</span>
+                <h2 class="section-title">Sua empresa presente onde o cliente descobre, pesquisa e decide</h2>
             </div>
 
             <!-- BLOCO REDES SOCIAIS -->
@@ -2058,7 +2184,7 @@
                         <path d="M16 4.25A11.7 11.7 0 0 0 6.1 22.2L4.5 27.75l5.7-1.5A11.74 11.74 0 1 0 16 4.25Z" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
                         <path d="M11.3 10.3c.35-.72.7-.74 1.05-.76h.9c.28 0 .57.1.73.52l1.04 2.52c.12.3.06.58-.13.83l-.8 1c-.2.24-.14.5-.02.72.77 1.42 1.82 2.5 3.28 3.27.23.12.5.18.73-.02l1-.8c.25-.2.53-.25.83-.13l2.52 1.04c.42.16.52.45.52.73v.9c-.02.35-.04.7-.76 1.05-.8.38-2.65.75-5.3-.34-3.05-1.25-5.45-3.66-6.7-6.7-1.09-2.65-.72-4.5-.34-5.3Z" fill="currentColor"/>
                     </svg>
-                    Falar no WhatsApp
+                    AGENDAR MEU DIAGNÓSTICO
                 </a>
                 <div class="boutique-note">
                     <p><strong>Somos uma agência boutique.</strong> Atendemos poucos projetos por vez para garantir qualidade total em cada entrega. Vagas limitadas por mês.</p>
@@ -2077,7 +2203,7 @@
             <div class="faq-list">
                 <div class="faq-item">
                     <button class="faq-question" type="button" aria-expanded="false" aria-controls="faq-answer-1"><span>💰 Qual o investimento mínimo em verba de anúncios?</span><span class="faq-toggle" aria-hidden="true">+</span></button>
-                    <div id="faq-answer-1" class="faq-answer"><div class="faq-answer-inner"><p>O investimento em mídia varia conforme o mercado e os objetivos. Em muitos projetos, recomendamos começar entre R$ 1.200 e R$ 5.000 por mês para gerar dados suficientes para otimização.</p></div></div>
+                    <div id="faq-answer-1" class="faq-answer"><div class="faq-answer-inner"><p>O investimento em mídia varia conforme o mercado e os objetivos. Em muitos projetos, recomendamos começar entre R$ 1.200 e R$ 5.000 por mês para gerar dados suficientes para otimização. A verba é paga diretamente às plataformas e não inclui os honorários da gestão, definidos na proposta conforme o escopo do projeto.</p></div></div>
                 </div>
                 <div class="faq-item">
                     <button class="faq-question" type="button" aria-expanded="false" aria-controls="faq-answer-2"><span>⏰ Em quanto tempo vejo resultado?</span><span class="faq-toggle" aria-hidden="true">+</span></button>
@@ -2094,6 +2220,14 @@
                 <div class="faq-item">
                     <button class="faq-question" type="button" aria-expanded="false" aria-controls="faq-answer-5"><span>📄 Como funciona o contrato?</span><span class="faq-toggle" aria-hidden="true">+</span></button>
                     <div id="faq-answer-5" class="faq-answer"><div class="faq-answer-inner"><p>Trabalhamos com um ciclo inicial mínimo de três meses. Esse período é necessário tanto para estruturar todo o ecossistema de aquisição, incluindo redes sociais, redes de pesquisa, campanhas, rastreamento e mensuração, quanto para coletar dados, realizar testes e otimizar a estratégia. O cronograma, as etapas e as condições são definidos na proposta conforme o cenário e os objetivos de cada empresa, com expectativas alinhadas desde o início.</p></div></div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" type="button" aria-expanded="false" aria-controls="faq-answer-6"><span>🧩 O que está incluído na gestão?</span><span class="faq-toggle" aria-hidden="true">+</span></button>
+                    <div id="faq-answer-6" class="faq-answer"><div class="faq-answer-inner"><p>O escopo é definido conforme a necessidade de cada empresa e pode incluir diagnóstico, planejamento, estrutura de campanhas, rastreamento, páginas, criativos, acompanhamento dos dados e alinhamento com o processo comercial. Todas as entregas são detalhadas na proposta antes da contratação.</p></div></div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" type="button" aria-expanded="false" aria-controls="faq-answer-7"><span>📈 Existe garantia de resultados?</span><span class="faq-toggle" aria-hidden="true">+</span></button>
+                    <div id="faq-answer-7" class="faq-answer"><div class="faq-answer-inner"><p>Não prometemos um resultado específico, pois a performance também depende do mercado, da oferta, do investimento, do atendimento e do processo comercial. Trabalhamos com metas, mensuração, testes e otimizações contínuas para aumentar a eficiência e buscar a melhor evolução possível.</p></div></div>
                 </div>
             </div>
         </div>
@@ -2118,7 +2252,7 @@
                 <div>
                     <div class="footer-title">Contato</div>
                     <div class="footer-contact">
-                        <a href="https://wa.me/5524999609726" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+                        <a href="https://wa.me/5524999609726?text=Ol%C3%A1%21%20Vim%20do%20site%20da%20uResult%20e%20quero%20saber%20mais%20sobre%20tr%C3%A1fego%20pago." target="_blank" rel="noopener noreferrer">WhatsApp</a>
                         <a href="https://instagram.com/euotavioandrade" target="_blank" rel="noopener noreferrer">Instagram</a>
                         <span>Atendimento online em todo o Brasil</span>
                     </div>
@@ -2132,7 +2266,7 @@
     </footer>
 
     <!-- WHATSAPP FLOAT -->
-    <a href="https://wa.me/5524999609726?text=Olá!%20Vim%20do%20site%20e%20quero%20saber%20mais%20sobre%20tráfego%20pago" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Falar com a uResult pelo WhatsApp">
+    <a href="https://wa.me/5524999609726?text=Ol%C3%A1%21%20Vim%20do%20site%20da%20uResult%20e%20quero%20saber%20mais%20sobre%20tr%C3%A1fego%20pago." class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Falar com a uResult pelo WhatsApp">
         <svg viewBox="0 0 32 32" aria-hidden="true">
             <path d="M16 4.25A11.7 11.7 0 0 0 6.1 22.2L4.5 27.75l5.7-1.5A11.74 11.74 0 1 0 16 4.25Z" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
             <path d="M11.3 10.3c.35-.72.7-.74 1.05-.76h.9c.28 0 .57.1.73.52l1.04 2.52c.12.3.06.58-.13.83l-.8 1c-.2.24-.14.5-.02.72.77 1.42 1.82 2.5 3.28 3.27.23.12.5.18.73-.02l1-.8c.25-.2.53-.25.83-.13l2.52 1.04c.42.16.52.45.52.73v.9c-.02.35-.04.7-.76 1.05-.8.38-2.65.75-5.3-.34-3.05-1.25-5.45-3.66-6.7-6.7-1.09-2.65-.72-4.5-.34-5.3Z" fill="currentColor"/>
@@ -2237,6 +2371,8 @@
                 '.hero-subtitle',
                 '.hero-ctas',
                 '.proof-item',
+                '.problem-intro',
+                '.problem-card',
                 '.process-intro',
                 '.process-card',
                 '.method-intro',
