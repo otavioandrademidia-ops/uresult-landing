@@ -13,14 +13,14 @@
     <meta property="og:title" content="uResult - Tráfego Pago para Empresas que Querem Escalar">
     <meta property="og:description" content="Estratégia de tráfego pago para empresas que já faturam e querem conquistar mais clientes e escalar as vendas.">
     <meta property="og:url" content="https://uresult.com.br/">
-    <meta property="og:image" content="https://uresult.com.br/og-preview.png">
-    <meta property="og:image:width" content="1731">
-    <meta property="og:image:height" content="909">
+    <meta property="og:image" content="https://uresult.com.br/og-preview-v2.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
     <meta property="og:image:alt" content="uResult, tráfego pago estratégico para empresas que querem escalar">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="uResult - Tráfego Pago Estratégico">
     <meta name="twitter:description" content="Estratégia para empresas que já faturam e querem conquistar mais clientes e escalar as vendas.">
-    <meta name="twitter:image" content="https://uresult.com.br/og-preview.png">
+    <meta name="twitter:image" content="https://uresult.com.br/og-preview-v2.jpg">
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <link rel="shortcut icon" href="favicon.svg">
     
@@ -221,7 +221,7 @@
             text-align: center;
         }
         
-        .proof-item h3 {
+        .proof-item .proof-number {
             font-size: 48px;
             font-weight: 900;
             color: #0047AB;
@@ -360,13 +360,13 @@
         
         .section-tag {
             display: inline-block;
-            background: rgba(0, 71, 171, 0.2);
-            border: 1px solid rgba(0, 71, 171, 0.4);
+            background: rgba(34, 111, 214, 0.22);
+            border: 1px solid rgba(102, 173, 255, 0.55);
             padding: 8px 20px;
             border-radius: 50px;
             font-size: 12px;
             font-weight: 600;
-            color: #0047AB;
+            color: #66ADFF;
             margin-bottom: 20px;
             text-transform: uppercase;
             letter-spacing: 1px;
@@ -819,6 +819,115 @@
             max-width: 820px;
         }
 
+        .results-preview-section {
+            padding: 76px 0;
+            background: #070707;
+            border-top: 1px solid #151515;
+            border-bottom: 1px solid #151515;
+            scroll-margin-top: 100px;
+        }
+
+        .results-preview-intro {
+            max-width: 780px;
+        }
+
+        .results-preview-intro .section-subtitle {
+            margin-left: 0;
+        }
+
+        .results-preview-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 18px;
+            margin-top: 34px;
+        }
+
+        .result-preview-card.testimonial-open {
+            display: grid;
+            grid-template-columns: 96px minmax(0, 1fr);
+            align-items: center;
+            min-height: 132px;
+            padding: 10px;
+            color: #FFFFFF;
+            background: #0D0D0D;
+            border: 1px solid #232323;
+            border-radius: 16px;
+            font: inherit;
+            text-align: left;
+            cursor: zoom-in;
+            transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+        }
+
+        .result-preview-card.testimonial-open:hover {
+            transform: translateY(-3px);
+            border-color: #3B82F6;
+            box-shadow: 0 16px 34px rgba(0, 71, 171, 0.16);
+        }
+
+        .result-preview-card.testimonial-open:focus-visible {
+            outline: 3px solid #66ADFF;
+            outline-offset: 3px;
+        }
+
+        .result-preview-media {
+            width: 96px;
+            height: 112px;
+            overflow: hidden;
+            background: #050505;
+            border-radius: 11px;
+        }
+
+        .result-preview-media img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: top;
+        }
+
+        .result-preview-content {
+            padding: 10px 12px 10px 16px;
+        }
+
+        .result-preview-content span {
+            display: block;
+            margin-bottom: 7px;
+            color: #66ADFF;
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: 0.9px;
+            text-transform: uppercase;
+        }
+
+        .result-preview-content h3 {
+            color: #FFFFFF;
+            font-size: 16px;
+            line-height: 1.35;
+        }
+
+        .results-preview-link {
+            margin-top: 28px;
+        }
+
+        .results-preview-link a {
+            display: inline-flex;
+            min-height: 44px;
+            align-items: center;
+            color: #66ADFF;
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            text-decoration: none;
+        }
+
+        .results-preview-link a:hover {
+            color: #FFFFFF;
+        }
+
+        .testimonials-swipe-hint {
+            display: none;
+        }
+
         .testimonials-grid {
             display: grid;
             grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -1060,7 +1169,7 @@
             font-weight: 600;
         }
         
-        .uresult-card h4 {
+        .uresult-card h3 {
             font-size: 18px;
             font-weight: 700;
             margin-bottom: 15px;
@@ -1279,7 +1388,7 @@
         .footer-logo {
             font-size: 32px;
             font-weight: 900;
-            color: #0047AB;
+            color: #66ADFF;
             margin-bottom: 14px;
         }
 
@@ -1308,6 +1417,9 @@
         }
         
         .footer-links a {
+            display: inline-flex;
+            min-height: 32px;
+            align-items: center;
             color: #888;
             text-decoration: none;
             font-size: 14px;
@@ -1315,7 +1427,7 @@
         }
         
         .footer-links a:hover {
-            color: #0047AB;
+            color: #66ADFF;
         }
 
         .footer-contact {
@@ -1336,6 +1448,12 @@
             color: #25D366;
         }
 
+        .footer-contact a {
+            display: inline-flex;
+            min-height: 32px;
+            align-items: center;
+        }
+
         .footer-bottom {
             display: flex;
             justify-content: space-between;
@@ -1347,14 +1465,14 @@
         
         .footer-copy {
             font-size: 13px;
-            color: #555;
+            color: #9CA3AF;
         }
         
         .footer-availability {
             display: inline-flex;
             align-items: center;
             gap: 8px;
-            color: #666;
+            color: #A3A3A3;
             font-size: 12px;
         }
 
@@ -1568,7 +1686,7 @@
                 gap: 22px 14px;
             }
 
-            .proof-item h3 {
+            .proof-item .proof-number {
                 font-size: 34px;
                 line-height: 1.05;
                 white-space: nowrap;
@@ -1610,6 +1728,52 @@
                 scroll-snap-type: inline mandatory;
                 scrollbar-width: thin;
                 scrollbar-color: #0047AB #111111;
+            }
+
+            .results-preview-section {
+                padding: 62px 0;
+            }
+
+            .results-preview-grid {
+                grid-template-columns: 1fr;
+                gap: 12px;
+                margin-top: 28px;
+            }
+
+            .result-preview-card.testimonial-open {
+                grid-template-columns: 88px minmax(0, 1fr);
+                min-height: 116px;
+                padding: 8px;
+            }
+
+            .result-preview-media {
+                width: 88px;
+                height: 100px;
+            }
+
+            .result-preview-content {
+                padding: 8px 10px 8px 14px;
+            }
+
+            .results-preview-link {
+                margin-top: 20px;
+            }
+
+            .testimonials-swipe-hint {
+                display: flex;
+                align-items: center;
+                gap: 8px;
+                margin-top: 24px;
+                color: #AEB8C7;
+                font-size: 13px;
+                font-weight: 600;
+            }
+
+            .testimonials-swipe-hint::after {
+                content: '→';
+                color: #66ADFF;
+                font-size: 20px;
+                line-height: 1;
             }
 
             .testimonial-card {
@@ -1803,7 +1967,7 @@
                 line-height: 1.35;
             }
 
-            .uresult-card h4 {
+            .uresult-card h3 {
                 margin-bottom: 8px;
             }
 
@@ -1956,6 +2120,7 @@
         </div>
     </header>
 
+    <main id="main-content">
     <!-- HERO - ABA 1 -->
     <section class="hero">
         <div class="container">
@@ -1966,7 +2131,7 @@
                     Se sua empresa já fatura e você acredita que pode faturar ainda mais, clique no botão abaixo e fale conosco pelo WhatsApp.
                 </p>
                 <div class="hero-ctas">
-                    <a href="https://wa.me/5524999609726?text=Ol%C3%A1%21%20Vim%20do%20site%20da%20uResult%20e%20quero%20escalar%20minhas%20vendas%20com%20tr%C3%A1fego%20pago." class="btn-primary" target="_blank" rel="noopener noreferrer">QUERO ESCALAR MINHAS VENDAS</a>
+                    <a href="https://wa.me/5524999609726?text=Ol%C3%A1%21%20Vim%20do%20site%20da%20uResult%20e%20quero%20escalar%20minhas%20vendas%20com%20tr%C3%A1fego%20pago." class="btn-primary" target="_blank" rel="noopener noreferrer" aria-label="Quero escalar minhas vendas pelo WhatsApp, apresentação principal">QUERO ESCALAR MINHAS VENDAS</a>
                 </div>
             </div>
         </div>
@@ -1976,19 +2141,19 @@
             <div class="container">
                 <div class="proof-grid">
                     <div class="proof-item">
-                        <h3 data-counter data-value="50" data-prefix="+">+50</h3>
+                        <div class="proof-number" data-counter data-value="50" data-prefix="+">+50</div>
                         <p>Empresas Atendidas<br>Pelo Mundo</p>
                     </div>
                     <div class="proof-item">
-                        <h3 data-counter data-value="4" data-prefix="+" data-suffix=" anos">+4 anos</h3>
+                        <div class="proof-number" data-counter data-value="4" data-prefix="+" data-suffix=" anos">+4 anos</div>
                         <p>Desde 2022</p>
                     </div>
                     <div class="proof-item">
-                        <h3 data-counter data-value="1" data-prefix="+R$" data-suffix="M">+R$1M</h3>
+                        <div class="proof-number" data-counter data-value="1" data-prefix="+R$" data-suffix="M">+R$1M</div>
                         <p>Em verba de anúncios<br>gerenciada</p>
                     </div>
                     <div class="proof-item">
-                        <h3 data-counter data-value="3">3</h3>
+                        <div class="proof-number" data-counter data-value="3">3</div>
                         <p>Certificações</p>
                     </div>
                 </div>
@@ -2051,6 +2216,36 @@
                     <p>Acompanhamos os dados, realizamos testes e ajustamos a estratégia continuamente.</p>
                 </article>
             </div>
+        </div>
+    </section>
+
+    <!-- RESULTADOS EM DESTAQUE -->
+    <section class="results-preview-section" aria-labelledby="results-preview-title">
+        <div class="container">
+            <div class="results-preview-intro">
+                <span class="section-tag">RESULTADOS REAIS</span>
+                <h2 class="section-title" id="results-preview-title">Resultados em diferentes segmentos</h2>
+                <p class="section-subtitle">Uma seleção de registros reais antes de você conhecer todos os feedbacks.</p>
+            </div>
+
+            <div class="results-preview-grid">
+                <button class="result-preview-card testimonial-open" type="button" data-case-src="assets/case-uresult-ecommerce-junho-2026.jpg" data-case-caption="Resultado no e-commerce, junho de 2026." aria-label="Ampliar resultado de e-commerce com R$ 72,9 mil em faturamento no mês">
+                    <span class="result-preview-media"><img src="assets/case-uresult-ecommerce-junho-2026.jpg" width="900" height="1600" loading="lazy" decoding="async" alt=""></span>
+                    <span class="result-preview-content"><span>E-COMMERCE</span><h3>R$ 72,9 mil em faturamento no mês</h3></span>
+                </button>
+
+                <button class="result-preview-card testimonial-open" type="button" data-case-src="assets/case-imobiliario-vgv.jpg" data-case-caption="Resultado no mercado imobiliário." aria-label="Ampliar resultado do mercado imobiliário com mais de R$ 3 milhões em VGV">
+                    <span class="result-preview-media"><img src="assets/case-imobiliario-vgv.jpg" width="1179" height="1311" loading="lazy" decoding="async" alt=""></span>
+                    <span class="result-preview-content"><span>MERCADO IMOBILIÁRIO</span><h3>Mais de R$ 3 milhões em VGV</h3></span>
+                </button>
+
+                <button class="result-preview-card testimonial-open" type="button" data-case-src="assets/feedback-vendas-veiculos.jpg" data-case-caption="Resultado no segmento automotivo." aria-label="Ampliar resultado com veículos vendidos por meio do tráfego pago">
+                    <span class="result-preview-media"><img src="assets/feedback-vendas-veiculos.jpg" width="920" height="1600" loading="lazy" decoding="async" alt=""></span>
+                    <span class="result-preview-content"><span>SEGMENTO AUTOMOTIVO</span><h3>Veículos vendidos por meio do tráfego pago</h3></span>
+                </button>
+            </div>
+
+            <div class="results-preview-link"><a href="#resultados">VER TODOS OS RESULTADOS ↓</a></div>
         </div>
     </section>
 
@@ -2137,7 +2332,7 @@
             </div>
 
             <div class="method-cta">
-                <a href="https://wa.me/5524999609726?text=Ol%C3%A1%21%20Vim%20do%20site%20da%20uResult%20e%20quero%20entender%20como%20o%20tr%C3%A1fego%20pago%20pode%20ajudar%20minha%20empresa%20a%20escalar." class="btn-primary" target="_blank" rel="noopener noreferrer">QUERO ESCALAR MINHAS VENDAS</a>
+                <a href="https://wa.me/5524999609726?text=Ol%C3%A1%21%20Vim%20do%20site%20da%20uResult%20e%20quero%20entender%20como%20o%20tr%C3%A1fego%20pago%20pode%20ajudar%20minha%20empresa%20a%20escalar." class="btn-primary" target="_blank" rel="noopener noreferrer" aria-label="Quero escalar minhas vendas pelo WhatsApp, após conhecer a estratégia multicanal">QUERO ESCALAR MINHAS VENDAS</a>
             </div>
         </div>
     </section>
@@ -2149,6 +2344,8 @@
                 <span class="section-tag">CLIENTES SATISFEITOS</span>
                 <h2 class="section-title">Registros de alguns feedbacks reais de clientes</h2>
             </div>
+
+            <p class="testimonials-swipe-hint" aria-hidden="true">Deslize para ver mais resultados</p>
 
             <div class="testimonials-grid">
                 <article class="testimonial-card">
@@ -2306,49 +2503,49 @@
                 <div class="uresult-card">
                     <div class="uresult-letter">U</div>
                     <div class="uresult-tag">DIAGNÓSTICO COMPLETO</div>
-                    <h4>Universo</h4>
+                    <h3>Universo</h3>
                     <p>Mapeamos a operação de ponta a ponta para entender oferta, público, canais, atendimento e os pontos que limitam a evolução.</p>
                 </div>
                 
                 <div class="uresult-card">
                     <div class="uresult-letter">R</div>
                     <div class="uresult-tag">CAUSA REAL DOS PROBLEMAS</div>
-                    <h4>Raiz</h4>
+                    <h3>Raiz</h3>
                     <p>Diferenciamos os sintomas das causas reais e priorizamos o que mais influencia as vendas, a eficiência e a capacidade de escala.</p>
                 </div>
                 
                 <div class="uresult-card">
                     <div class="uresult-letter">E</div>
                     <div class="uresult-tag">SISTEMA DE CRESCIMENTO</div>
-                    <h4>Estrutura</h4>
+                    <h3>Estrutura</h3>
                     <p>Conectamos páginas, campanhas, mensuração, CRM e processo comercial em uma base organizada para crescer.</p>
                 </div>
                 
                 <div class="uresult-card">
                     <div class="uresult-letter">S</div>
                     <div class="uresult-tag">EXECUÇÃO E OTIMIZAÇÃO</div>
-                    <h4>Sistema</h4>
+                    <h3>Sistema</h3>
                     <p>Transformamos o plano em uma rotina de execução, testes e otimizações orientada por metas claras.</p>
                 </div>
 
                 <div class="uresult-card">
                     <div class="uresult-letter">U</div>
                     <div class="uresult-tag">DECISÃO BASEADA EM DADOS</div>
-                    <h4>Uso de dados</h4>
+                    <h3>Uso de dados</h3>
                     <p>Leituras frequentes mostram onde avançar, o que corrigir e como distribuir melhor cada investimento.</p>
                 </div>
                 
                 <div class="uresult-card">
                     <div class="uresult-letter">L</div>
                     <div class="uresult-tag">ESCALA PREVISÍVEL</div>
-                    <h4>Lucro previsível</h4>
+                    <h3>Lucro previsível</h3>
                     <p>Buscamos equilíbrio entre aquisição, conversão e margem para tornar o crescimento mais saudável e previsível.</p>
                 </div>
                 
                 <div class="uresult-card">
                     <div class="uresult-letter">T</div>
                     <div class="uresult-tag">ACELERAÇÃO E CONSISTÊNCIA</div>
-                    <h4>Tração</h4>
+                    <h3>Tração</h3>
                     <p>Com aprendizado acumulado e operação alinhada, ampliamos o que funciona sem perder o controle da performance.</p>
                 </div>
             </div>
@@ -2419,6 +2616,8 @@
             </div>
         </div>
     </section>
+
+    </main>
 
     <!-- FOOTER -->
     <footer>

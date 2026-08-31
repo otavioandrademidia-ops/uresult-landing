@@ -2,7 +2,7 @@
 
 O site já está preparado. Enquanto os códigos estiverem vazios em `tracking-config.js`, nenhum rastreamento será carregado e o banner de cookies ficará oculto.
 
-## Opção 1 — instalação direta (mais simples)
+## Opção 1: instalação direta (mais simples)
 
 Use esta opção quando você tiver o código `G-...` do Google Analytics 4 e/ou o número do Meta Pixel.
 
@@ -27,7 +27,7 @@ window.URESULT_TRACKING_CONFIG = Object.freeze({
 
 Depois da publicação, o banner aparecerá automaticamente. O GA4 só será carregado após autorização para Analytics, e o Meta Pixel somente após autorização para Marketing.
 
-## Opção 2 — Google Tag Manager (recomendada para gestão avançada)
+## Opção 2: Google Tag Manager (recomendada para gestão avançada)
 
 Use esta opção quando você tiver um contêiner `GTM-...` e quiser administrar as ferramentas dentro do Tag Manager.
 
