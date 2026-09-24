@@ -10,8 +10,8 @@
  *   demais ferramentas dentro dele.
  */
 window.URESULT_TRACKING_CONFIG = Object.freeze({
-    strategy: "direct",
-    googleTagManagerId: "",
+    strategy: "gtm",
+    googleTagManagerId: "GTM-53J9SRJ7",
     googleAnalyticsId: "",
     metaPixelId: "",
     consentVersion: "1.0"
