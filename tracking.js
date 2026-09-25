@@ -167,8 +167,12 @@
         if (!safeName) return;
 
         if (strategy === "gtm") {
+            const hasOptionalConsent = Boolean(preferences && (preferences.analytics || preferences.marketing));
+            if (!hasOptionalConsent && safeName !== "whatsapp_click") return;
             ensureDataLayer();
-            window.dataLayer.push(Object.assign({ event: safeName }, parameters || {}));
+            window.dataLayer.push(safeName === "whatsapp_click"
+                ? { event: safeName }
+                : Object.assign({ event: safeName }, parameters || {}));
             return;
         }
 
