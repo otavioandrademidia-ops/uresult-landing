@@ -240,8 +240,7 @@
             .ur-cookie-modal-actions { display: flex; justify-content: flex-end; gap: 10px; margin-top: 24px; }
             @media (max-width: 760px) {
                 .ur-cookie-banner { bottom: 12px; padding: 19px; align-items: stretch; flex-direction: column; gap: 16px; }
-                .ur-cookie-actions { display: grid; grid-template-columns: 1fr 1fr; }
-                .ur-cookie-button-primary { grid-column: 1 / -1; grid-row: 1; }
+                .ur-cookie-actions { display: grid; grid-template-columns: 1fr; }
                 .ur-cookie-modal { padding: 24px 20px; }
                 .ur-cookie-modal-actions { display: grid; grid-template-columns: 1fr 1fr; }
                 .ur-cookie-manage { left: 12px; bottom: 12px; }
@@ -262,13 +261,11 @@
         banner.hidden = true;
         banner.innerHTML = `
             <div class="ur-cookie-copy">
-                <strong>Você escolhe como seus dados são usados</strong>
-                <p>Cookies opcionais de medição e publicidade só serão ativados com sua autorização. <a href="privacidade.html">Leia a Política de Privacidade</a>.</p>
+                <p>Usamos cookies para melhorar sua experiência na uResult. Consulte mais informações na nossa <a href="https://uresult.com.br/privacidade.html">Política de Privacidade</a>.</p>
             </div>
             <div class="ur-cookie-actions">
-                <button class="ur-cookie-button" type="button" data-cookie-action="reject">Recusar</button>
-                <button class="ur-cookie-button" type="button" data-cookie-action="manage">Gerenciar</button>
-                <button class="ur-cookie-button ur-cookie-button-primary" type="button" data-cookie-action="accept">Aceitar todos</button>
+                <button class="ur-cookie-button" type="button" data-cookie-action="manage">Configurar cookies</button>
+                <button class="ur-cookie-button ur-cookie-button-primary" type="button" data-cookie-action="accept">Aceitar cookies</button>
             </div>
         `;
 
@@ -347,9 +344,6 @@
 
         banner.querySelector('[data-cookie-action="accept"]').addEventListener("click", function () {
             finishChoice({ analytics: supportsAnalytics, marketing: supportsMarketing }, false);
-        });
-        banner.querySelector('[data-cookie-action="reject"]').addEventListener("click", function () {
-            finishChoice({ analytics: false, marketing: false }, false);
         });
         banner.querySelector('[data-cookie-action="manage"]').addEventListener("click", openSettings);
         manageButton.addEventListener("click", openSettings);
