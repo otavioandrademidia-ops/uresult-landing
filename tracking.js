@@ -67,11 +67,13 @@
     function loadGoogleTagManager(nextPreferences) {
         if (!gtmId || document.getElementById("uresult-gtm")) return;
         setGoogleConsent({ analytics: false, marketing: false }, "default");
+        window.gtag("set", "ads_data_redaction", true);
         setGoogleConsent(nextPreferences, "update");
         window.dataLayer.push({
             "gtm.start": Date.now(),
             event: "gtm.js",
-            uresult_analytics_consent: nextPreferences.analytics === true
+            uresult_analytics_consent: nextPreferences.analytics === true,
+            uresult_marketing_consent: nextPreferences.marketing === true
         });
 
         const script = document.createElement("script");
@@ -125,10 +127,10 @@
         };
 
         if (strategy === "gtm") {
-            if (preferences.analytics || preferences.marketing) {
-                loadGoogleTagManager(preferences);
-            } else if (window.gtag) {
+            if (document.getElementById("uresult-gtm")) {
                 setGoogleConsent(preferences, "update");
+            } else {
+                loadGoogleTagManager(preferences);
             }
             return;
         }
@@ -162,14 +164,15 @@
 
     function track(eventName, parameters) {
         const safeName = String(eventName || "").replace(/[^a-zA-Z0-9_]/g, "_");
-        if (!safeName || !preferences) return;
+        if (!safeName) return;
 
-        if (strategy === "gtm" && (preferences.analytics || preferences.marketing)) {
+        if (strategy === "gtm") {
             ensureDataLayer();
             window.dataLayer.push(Object.assign({ event: safeName }, parameters || {}));
             return;
         }
 
+        if (!preferences) return;
         if (preferences.analytics && window.gtag) {
             window.gtag("event", safeName, parameters || {});
         }
@@ -244,6 +247,9 @@
     }
 
     function buildInterface() {
+        if (strategy === "gtm") {
+            loadGoogleTagManager(preferences || { analytics: false, marketing: false });
+        }
         injectStyles();
 
         const banner = document.createElement("section");
@@ -368,10 +374,7 @@
         document.addEventListener("click", function (event) {
             const link = event.target.closest('a[href*="wa.me"], a[href*="api.whatsapp.com"]');
             if (!link) return;
-            track("whatsapp_click", {
-                link_url: link.href,
-                page_path: window.location.pathname
-            });
+            track("whatsapp_click");
         });
     }
 
