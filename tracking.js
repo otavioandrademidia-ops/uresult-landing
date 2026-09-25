@@ -68,7 +68,11 @@
         if (!gtmId || document.getElementById("uresult-gtm")) return;
         setGoogleConsent({ analytics: false, marketing: false }, "default");
         setGoogleConsent(nextPreferences, "update");
-        window.dataLayer.push({ "gtm.start": Date.now(), event: "gtm.js" });
+        window.dataLayer.push({
+            "gtm.start": Date.now(),
+            event: "gtm.js",
+            uresult_analytics_consent: nextPreferences.analytics === true
+        });
 
         const script = document.createElement("script");
         script.id = "uresult-gtm";
