@@ -205,11 +205,6 @@
             }
             .ur-cookie-button:hover { transform: translateY(-1px); border-color: #0066ff; }
             .ur-cookie-button-primary { border-color: #0066ff; background: #0066ff; }
-            .ur-cookie-manage {
-                position: fixed; left: 18px; bottom: 18px; z-index: 2100; padding: 8px 12px;
-                color: #aeb7c7; background: rgba(7, 10, 16, .92); border: 1px solid #273247;
-                border-radius: 999px; cursor: pointer; font: 600 11px 'Poppins', Arial, sans-serif;
-            }
             .ur-cookie-overlay {
                 position: fixed; inset: 0; z-index: 5100; display: grid; place-items: center;
                 padding: 20px; background: rgba(0, 0, 0, .78); backdrop-filter: blur(6px);
@@ -236,7 +231,6 @@
                 .ur-cookie-actions { display: grid; grid-template-columns: 1fr; }
                 .ur-cookie-modal { padding: 24px 20px; }
                 .ur-cookie-modal-actions { display: grid; grid-template-columns: 1fr 1fr; }
-                .ur-cookie-manage { left: 12px; bottom: 12px; }
             }
         `;
         document.head.appendChild(style);
@@ -258,12 +252,6 @@
                 <button class="ur-cookie-button ur-cookie-button-primary" type="button" data-cookie-action="accept">Aceitar cookies</button>
             </div>
         `;
-
-        const manageButton = document.createElement("button");
-        manageButton.type = "button";
-        manageButton.className = "ur-cookie-manage";
-        manageButton.textContent = "Preferências de cookies";
-        manageButton.hidden = !preferences;
 
         const overlay = document.createElement("div");
         overlay.className = "ur-cookie-overlay";
@@ -297,7 +285,6 @@
         `;
 
         document.body.appendChild(banner);
-        document.body.appendChild(manageButton);
         document.body.appendChild(overlay);
 
         const analyticsRow = overlay.querySelector('[data-cookie-category="analytics"]');
@@ -328,7 +315,6 @@
             applyPreferences(nextPreferences);
             banner.hidden = true;
             overlay.hidden = true;
-            manageButton.hidden = false;
             if (reloadAfterSave && hadPreferences) window.location.reload();
         }
 
@@ -336,7 +322,12 @@
             finishChoice({ analytics: supportsAnalytics, marketing: supportsMarketing }, false);
         });
         banner.querySelector('[data-cookie-action="manage"]').addEventListener("click", openSettings);
-        manageButton.addEventListener("click", openSettings);
+        document.querySelectorAll('[data-cookie-action="open-settings"]').forEach(function (link) {
+            link.addEventListener("click", function (event) {
+                event.preventDefault();
+                openSettings();
+            });
+        });
         overlay.querySelector(".ur-cookie-close").addEventListener("click", closeSettings);
         overlay.querySelector('[data-cookie-action="reject-modal"]').addEventListener("click", function () {
             finishChoice({ analytics: false, marketing: false }, true);
