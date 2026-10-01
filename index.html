@@ -38,6 +38,16 @@
             scroll-behavior: smooth;
             scroll-padding-top: 110px;
         }
+
+        /* O espaçamento do cabeçalho é aplicado uma única vez pelo html. */
+        #diagnostico,
+        #form,
+        #resultados,
+        #faq,
+        #metodo,
+        #google-ads {
+            scroll-margin-top: 0;
+        }
         
         body {
             font-family: 'Poppins', sans-serif;
@@ -2310,7 +2320,7 @@
             </div>
 
             <!-- BLOCO GOOGLE -->
-            <div class="method-block reverse">
+            <div class="method-block reverse" id="google-ads">
                 <div class="method-content">
                     <span class="section-tag">PRESENÇA NO GOOGLE</span>
                     <h3>Esteja presente onde a intenção de compra já existe</h3>
@@ -2503,7 +2513,7 @@
     </section>
 
     <!-- URESULT METHOD - ABA 4 PARTE 2 -->
-    <section class="uresult-section">
+    <section id="metodo" class="uresult-section">
         <div class="container">
             <span class="section-tag">NOSSA METODOLOGIA EXCLUSIVA</span>
             <h2 class="section-title">O Método uResult</h2>
@@ -2567,8 +2577,8 @@
     </section>
 
     <!-- CONTACT -->
-    <section id="form" class="contact-section">
-        <div class="container">
+    <section id="diagnostico" class="contact-section">
+        <div id="form" class="container">
             <div class="contact-panel">
                 <div class="contact-eyebrow">Poucos projetos por vez</div>
                 <h2 class="contact-title">Seu negócio merece <span>vender mais</span> e ter uma estrutura que trabalha por você, mesmo enquanto você dorme.</h2>
@@ -2640,7 +2650,7 @@
                 <div>
                     <div class="footer-title">Navegação</div>
                     <nav class="footer-links" aria-label="Navegação do rodapé">
-                        <a href="#form">Diagnóstico</a>
+                        <a href="#diagnostico">Diagnóstico</a>
                         <a href="#resultados">Resultados</a>
                         <a href="#faq">Perguntas frequentes</a>
                         <a href="privacidade.html">Política de Privacidade</a>
@@ -2675,16 +2685,24 @@
 
     <!-- INTERACTIONS -->
     <script>
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                const target = document.querySelector(this.getAttribute('href'));
-                if (!target) return;
-                e.preventDefault();
-                target.scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
+        // Reposiciona o acesso direto após imagens e fontes definirem o layout final.
+        const initialHash = window.location.hash;
+        if (initialHash) {
+            window.addEventListener('load', async () => {
+                await document.fonts.ready;
+                if (window.location.hash !== initialHash) return;
+                let targetId;
+                try {
+                    targetId = decodeURIComponent(initialHash.slice(1));
+                } catch {
+                    return;
+                }
+                const target = document.getElementById(targetId);
+                if (target) {
+                    requestAnimationFrame(() => target.scrollIntoView({ behavior: 'instant', block: 'start' }));
+                }
+            }, { once: true });
+        }
 
         document.querySelectorAll('.faq-question').forEach(button => {
             button.addEventListener('click', () => {
