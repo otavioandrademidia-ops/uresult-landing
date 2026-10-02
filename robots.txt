@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://uresult.com.br/sitemap.xml
