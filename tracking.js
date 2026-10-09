@@ -10,6 +10,7 @@
     const supportsMarketing = strategy === "gtm" ? Boolean(gtmId) : Boolean(metaPixelId);
     const isConfigured = supportsAnalytics || supportsMarketing;
     const consentKey = `uresult_cookie_consent_session_${config.consentVersion || "1.0"}`;
+    const persistentConsentKey = `uresult_cookie_consent_${config.consentVersion || "1.0"}`;
 
     window.uResultTracking = {
         isConfigured,
@@ -24,24 +25,40 @@
     function readPreferences() {
         try {
             const stored = window.sessionStorage.getItem(consentKey);
-            if (!stored) return null;
-            const parsed = JSON.parse(stored);
-            if (typeof parsed.analytics !== "boolean" || typeof parsed.marketing !== "boolean") return null;
-            return parsed;
+            if (stored) {
+                const parsed = JSON.parse(stored);
+                if (typeof parsed.analytics === "boolean" && typeof parsed.marketing === "boolean") return parsed;
+            }
+        } catch (error) {
+            // A preferência persistente ainda pode estar disponível.
+        }
+        try {
+            const saved = JSON.parse(window.localStorage.getItem(persistentConsentKey));
+            return saved && saved.analytics === true && saved.marketing === true ? saved : null;
         } catch (error) {
             return null;
         }
     }
 
     function storePreferences(nextPreferences) {
+        const saved = JSON.stringify({
+            analytics: Boolean(nextPreferences.analytics),
+            marketing: Boolean(nextPreferences.marketing),
+            savedAt: new Date().toISOString()
+        });
         try {
-            window.sessionStorage.setItem(consentKey, JSON.stringify({
-                analytics: Boolean(nextPreferences.analytics),
-                marketing: Boolean(nextPreferences.marketing),
-                savedAt: new Date().toISOString()
-            }));
+            window.sessionStorage.setItem(consentKey, saved);
         } catch (error) {
             // Se o armazenamento estiver bloqueado, a escolha vale apenas para a sessão atual.
+        }
+        try {
+            if (nextPreferences.analytics && nextPreferences.marketing) {
+                window.localStorage.setItem(persistentConsentKey, saved);
+            } else {
+                window.localStorage.removeItem(persistentConsentKey);
+            }
+        } catch (error) {
+            // A escolha continua válida nesta aba mesmo sem armazenamento persistente.
         }
     }
 
@@ -278,7 +295,7 @@
                 <div class="ur-cookie-modal-header">
                     <div>
                         <h2 id="ur-cookie-title">Preferências de cookies</h2>
-                        <p class="ur-cookie-modal-intro">Confira as opções e clique em Salvar preferências para confirmar. Sua escolha vale durante esta sessão da aba. Você pode desativar os opcionais. Os necessários permanecem ativos.</p>
+                        <p class="ur-cookie-modal-intro">Ao permitir todos, sua preferência será lembrada nas próximas visitas. Se desativar algum opcional, a escolha vale nesta sessão da aba e perguntaremos novamente na próxima visita. Os necessários permanecem ativos.</p>
                     </div>
                     <button class="ur-cookie-close" type="button" aria-label="Fechar preferências">&times;</button>
                 </div>
