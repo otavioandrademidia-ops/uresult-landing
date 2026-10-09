@@ -448,3 +448,15 @@ summary:focus-visible { outline: 3px solid #58a0ff; outline-offset: 3px; border-
   html { scroll-behavior: auto; }
   *, *::before, *::after { animation: none !important; transition: none !important; }
 }
+
+/* Navegação estrutural e tabela de cenários das páginas locais. */
+.local-breadcrumb { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 24px; color: #bbb; font-size: 14px; }
+.local-anchor { display: block; scroll-margin-top: 120px; }
+.local-table-wrap { max-width: 100%; overflow-x: auto; margin-top: 32px; border: 1px solid #262626; border-radius: 14px; }
+.local-table-wrap:focus-visible { outline: 3px solid #58a0ff; outline-offset: 3px; }
+.local-table { width: 100%; min-width: 620px; border-collapse: collapse; text-align: left; }
+.local-table caption { padding: 18px; text-align: left; color: #bbb; font-size: 14px; }
+.local-table th, .local-table td { padding: 20px; border-top: 1px solid #262626; vertical-align: top; font-size: 15px; line-height: 1.7; }
+.local-table thead th { background: #0d111a; color: #fff; }
+.local-table tbody th { width: 25%; color: #fff; font-weight: 600; }
+.local-table td { color: #bbb; }
