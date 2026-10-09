@@ -224,7 +224,24 @@
             }
             .ur-cookie-option strong { display: block; margin-bottom: 4px; font-size: 14px; }
             .ur-cookie-option span { display: block; color: #8f98a8; font-size: 12px; line-height: 1.5; }
-            .ur-cookie-option input { width: 21px; height: 21px; accent-color: #0066ff; flex-shrink: 0; }
+            .ur-cookie-option input {
+                appearance: none; -webkit-appearance: none; position: relative;
+                width: 48px; height: 28px; margin: 0; flex-shrink: 0;
+                border: 1px solid #64748b; border-radius: 999px; background: #334155;
+                cursor: pointer; transition: background .15s, border-color .15s;
+            }
+            .ur-cookie-option input::before {
+                content: ''; position: absolute; top: 3px; left: 3px;
+                width: 20px; height: 20px; border-radius: 50%; background: #fff;
+                transition: transform .15s;
+            }
+            .ur-cookie-option input:checked { background: #0066ff; border-color: #0066ff; }
+            .ur-cookie-option input:checked::before { transform: translateX(20px); }
+            .ur-cookie-option input:focus-visible { outline: 3px solid #93c5fd; outline-offset: 4px; }
+            .ur-cookie-option input:disabled { opacity: .65; cursor: default; }
+            @media (prefers-reduced-motion: reduce) {
+                .ur-cookie-option input, .ur-cookie-option input::before { transition: none; }
+            }
             .ur-cookie-modal-actions { display: flex; justify-content: flex-end; gap: 10px; margin-top: 24px; }
             @media (max-width: 760px) {
                 .ur-cookie-banner { bottom: 12px; padding: 19px; align-items: stretch; flex-direction: column; gap: 16px; }
@@ -261,21 +278,21 @@
                 <div class="ur-cookie-modal-header">
                     <div>
                         <h2 id="ur-cookie-title">Preferências de cookies</h2>
-                        <p class="ur-cookie-modal-intro">Você pode alterar sua escolha a qualquer momento. Os cookies necessários permanecem ativos para guardar sua preferência.</p>
+                        <p class="ur-cookie-modal-intro">Confira as opções e clique em Salvar preferências para confirmar. Você pode desativar os opcionais ou alterar sua escolha depois. Os necessários permanecem ativos.</p>
                     </div>
                     <button class="ur-cookie-close" type="button" aria-label="Fechar preferências">&times;</button>
                 </div>
                 <div class="ur-cookie-option">
                     <div><strong>Necessários</strong><span>Guardam sua escolha e ajudam no funcionamento básico do site.</span></div>
-                    <input type="checkbox" checked disabled aria-label="Cookies necessários sempre ativos">
+                    <input type="checkbox" role="switch" checked disabled aria-label="Cookies necessários sempre ativos">
                 </div>
                 <label class="ur-cookie-option" data-cookie-category="analytics">
                     <div><strong>Analytics</strong><span>Ajuda a entender visitas, páginas acessadas e cliques.</span></div>
-                    <input type="checkbox" name="analytics">
+                    <input type="checkbox" role="switch" name="analytics" aria-label="Cookies de Analytics">
                 </label>
                 <label class="ur-cookie-option" data-cookie-category="marketing">
                     <div><strong>Marketing</strong><span>Permite medir campanhas e conversões publicitárias.</span></div>
-                    <input type="checkbox" name="marketing">
+                    <input type="checkbox" role="switch" name="marketing" aria-label="Cookies de Marketing">
                 </label>
                 <div class="ur-cookie-modal-actions">
                     <button class="ur-cookie-button" type="button" data-cookie-action="reject-modal">Recusar opcionais</button>
@@ -297,8 +314,8 @@
 
         function openSettings() {
             lastFocusedElement = document.activeElement;
-            analyticsInput.checked = Boolean(preferences && preferences.analytics);
-            marketingInput.checked = Boolean(preferences && preferences.marketing);
+            analyticsInput.checked = preferences ? preferences.analytics === true : supportsAnalytics;
+            marketingInput.checked = preferences ? preferences.marketing === true : supportsMarketing;
             overlay.hidden = false;
             overlay.querySelector(".ur-cookie-close").focus();
         }
