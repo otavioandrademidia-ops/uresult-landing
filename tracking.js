@@ -9,7 +9,7 @@
     const supportsAnalytics = strategy === "gtm" ? Boolean(gtmId) : Boolean(ga4Id);
     const supportsMarketing = strategy === "gtm" ? Boolean(gtmId) : Boolean(metaPixelId);
     const isConfigured = supportsAnalytics || supportsMarketing;
-    const consentKey = `uresult_cookie_consent_${config.consentVersion || "1.0"}`;
+    const consentKey = `uresult_cookie_consent_session_${config.consentVersion || "1.0"}`;
 
     window.uResultTracking = {
         isConfigured,
@@ -23,7 +23,7 @@
 
     function readPreferences() {
         try {
-            const stored = window.localStorage.getItem(consentKey);
+            const stored = window.sessionStorage.getItem(consentKey);
             if (!stored) return null;
             const parsed = JSON.parse(stored);
             if (typeof parsed.analytics !== "boolean" || typeof parsed.marketing !== "boolean") return null;
@@ -35,7 +35,7 @@
 
     function storePreferences(nextPreferences) {
         try {
-            window.localStorage.setItem(consentKey, JSON.stringify({
+            window.sessionStorage.setItem(consentKey, JSON.stringify({
                 analytics: Boolean(nextPreferences.analytics),
                 marketing: Boolean(nextPreferences.marketing),
                 savedAt: new Date().toISOString()
@@ -278,7 +278,7 @@
                 <div class="ur-cookie-modal-header">
                     <div>
                         <h2 id="ur-cookie-title">Preferências de cookies</h2>
-                        <p class="ur-cookie-modal-intro">Confira as opções e clique em Salvar preferências para confirmar. Você pode desativar os opcionais ou alterar sua escolha depois. Os necessários permanecem ativos.</p>
+                        <p class="ur-cookie-modal-intro">Confira as opções e clique em Salvar preferências para confirmar. Sua escolha vale durante esta sessão da aba. Você pode desativar os opcionais. Os necessários permanecem ativos.</p>
                     </div>
                     <button class="ur-cookie-close" type="button" aria-label="Fechar preferências">&times;</button>
                 </div>
