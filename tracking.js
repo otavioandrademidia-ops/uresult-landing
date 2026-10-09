@@ -9,7 +9,8 @@
     const supportsAnalytics = strategy === "gtm" ? Boolean(gtmId) : Boolean(ga4Id);
     const supportsMarketing = strategy === "gtm" ? Boolean(gtmId) : Boolean(metaPixelId);
     const isConfigured = supportsAnalytics || supportsMarketing;
-    const consentKey = `uresult_cookie_consent_${config.consentVersion || "1.0"}`;
+    const consentKey = `uresult_cookie_consent_session_${config.consentVersion || "1.0"}`;
+    const persistentConsentKey = `uresult_cookie_consent_${config.consentVersion || "1.0"}`;
 
     window.uResultTracking = {
         isConfigured,
@@ -23,25 +24,41 @@
 
     function readPreferences() {
         try {
-            const stored = window.localStorage.getItem(consentKey);
-            if (!stored) return null;
-            const parsed = JSON.parse(stored);
-            if (typeof parsed.analytics !== "boolean" || typeof parsed.marketing !== "boolean") return null;
-            return parsed;
+            const stored = window.sessionStorage.getItem(consentKey);
+            if (stored) {
+                const parsed = JSON.parse(stored);
+                if (typeof parsed.analytics === "boolean" && typeof parsed.marketing === "boolean") return parsed;
+            }
+        } catch (error) {
+            // A preferência persistente ainda pode estar disponível.
+        }
+        try {
+            const saved = JSON.parse(window.localStorage.getItem(persistentConsentKey));
+            return saved && saved.analytics === true && saved.marketing === true ? saved : null;
         } catch (error) {
             return null;
         }
     }
 
     function storePreferences(nextPreferences) {
+        const saved = JSON.stringify({
+            analytics: Boolean(nextPreferences.analytics),
+            marketing: Boolean(nextPreferences.marketing),
+            savedAt: new Date().toISOString()
+        });
         try {
-            window.localStorage.setItem(consentKey, JSON.stringify({
-                analytics: Boolean(nextPreferences.analytics),
-                marketing: Boolean(nextPreferences.marketing),
-                savedAt: new Date().toISOString()
-            }));
+            window.sessionStorage.setItem(consentKey, saved);
         } catch (error) {
             // Se o armazenamento estiver bloqueado, a escolha vale apenas para a sessão atual.
+        }
+        try {
+            if (nextPreferences.analytics && nextPreferences.marketing) {
+                window.localStorage.setItem(persistentConsentKey, saved);
+            } else {
+                window.localStorage.removeItem(persistentConsentKey);
+            }
+        } catch (error) {
+            // A escolha continua válida nesta aba mesmo sem armazenamento persistente.
         }
     }
 
@@ -224,7 +241,24 @@
             }
             .ur-cookie-option strong { display: block; margin-bottom: 4px; font-size: 14px; }
             .ur-cookie-option span { display: block; color: #8f98a8; font-size: 12px; line-height: 1.5; }
-            .ur-cookie-option input { width: 21px; height: 21px; accent-color: #0066ff; flex-shrink: 0; }
+            .ur-cookie-option input {
+                appearance: none; -webkit-appearance: none; position: relative;
+                width: 48px; height: 28px; margin: 0; flex-shrink: 0;
+                border: 1px solid #64748b; border-radius: 999px; background: #334155;
+                cursor: pointer; transition: background .15s, border-color .15s;
+            }
+            .ur-cookie-option input::before {
+                content: ''; position: absolute; top: 3px; left: 3px;
+                width: 20px; height: 20px; border-radius: 50%; background: #fff;
+                transition: transform .15s;
+            }
+            .ur-cookie-option input:checked { background: #0066ff; border-color: #0066ff; }
+            .ur-cookie-option input:checked::before { transform: translateX(20px); }
+            .ur-cookie-option input:focus-visible { outline: 3px solid #93c5fd; outline-offset: 4px; }
+            .ur-cookie-option input:disabled { opacity: .65; cursor: default; }
+            @media (prefers-reduced-motion: reduce) {
+                .ur-cookie-option input, .ur-cookie-option input::before { transition: none; }
+            }
             .ur-cookie-modal-actions { display: flex; justify-content: flex-end; gap: 10px; margin-top: 24px; }
             @media (max-width: 760px) {
                 .ur-cookie-banner { bottom: 12px; padding: 19px; align-items: stretch; flex-direction: column; gap: 16px; }
@@ -261,21 +295,21 @@
                 <div class="ur-cookie-modal-header">
                     <div>
                         <h2 id="ur-cookie-title">Preferências de cookies</h2>
-                        <p class="ur-cookie-modal-intro">Você pode alterar sua escolha a qualquer momento. Os cookies necessários permanecem ativos para guardar sua preferência.</p>
+                        <p class="ur-cookie-modal-intro">Ao permitir todos, sua preferência será lembrada nas próximas visitas. Se desativar algum opcional, a escolha vale nesta sessão da aba e perguntaremos novamente na próxima visita. Os necessários permanecem ativos.</p>
                     </div>
                     <button class="ur-cookie-close" type="button" aria-label="Fechar preferências">&times;</button>
                 </div>
                 <div class="ur-cookie-option">
                     <div><strong>Necessários</strong><span>Guardam sua escolha e ajudam no funcionamento básico do site.</span></div>
-                    <input type="checkbox" checked disabled aria-label="Cookies necessários sempre ativos">
+                    <input type="checkbox" role="switch" checked disabled aria-label="Cookies necessários sempre ativos">
                 </div>
                 <label class="ur-cookie-option" data-cookie-category="analytics">
                     <div><strong>Analytics</strong><span>Ajuda a entender visitas, páginas acessadas e cliques.</span></div>
-                    <input type="checkbox" name="analytics">
+                    <input type="checkbox" role="switch" name="analytics" aria-label="Cookies de Analytics">
                 </label>
                 <label class="ur-cookie-option" data-cookie-category="marketing">
                     <div><strong>Marketing</strong><span>Permite medir campanhas e conversões publicitárias.</span></div>
-                    <input type="checkbox" name="marketing">
+                    <input type="checkbox" role="switch" name="marketing" aria-label="Cookies de Marketing">
                 </label>
                 <div class="ur-cookie-modal-actions">
                     <button class="ur-cookie-button" type="button" data-cookie-action="reject-modal">Recusar opcionais</button>
@@ -297,8 +331,8 @@
 
         function openSettings() {
             lastFocusedElement = document.activeElement;
-            analyticsInput.checked = Boolean(preferences && preferences.analytics);
-            marketingInput.checked = Boolean(preferences && preferences.marketing);
+            analyticsInput.checked = preferences ? preferences.analytics === true : supportsAnalytics;
+            marketingInput.checked = preferences ? preferences.marketing === true : supportsMarketing;
             overlay.hidden = false;
             overlay.querySelector(".ur-cookie-close").focus();
         }
