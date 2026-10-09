@@ -264,7 +264,7 @@
                 .ur-cookie-banner { bottom: 12px; padding: 19px; align-items: stretch; flex-direction: column; gap: 16px; }
                 .ur-cookie-actions { display: grid; grid-template-columns: 1fr; }
                 .ur-cookie-modal { padding: 24px 20px; }
-                .ur-cookie-modal-actions { display: grid; grid-template-columns: 1fr 1fr; }
+                .ur-cookie-modal-actions { display: grid; grid-template-columns: 1fr; }
             }
         `;
         document.head.appendChild(style);
@@ -312,7 +312,6 @@
                     <input type="checkbox" role="switch" name="marketing" aria-label="Cookies de Marketing">
                 </label>
                 <div class="ur-cookie-modal-actions">
-                    <button class="ur-cookie-button" type="button" data-cookie-action="reject-modal">Recusar opcionais</button>
                     <button class="ur-cookie-button ur-cookie-button-primary" type="button" data-cookie-action="save">Salvar preferências</button>
                 </div>
             </div>
@@ -363,9 +362,6 @@
             });
         });
         overlay.querySelector(".ur-cookie-close").addEventListener("click", closeSettings);
-        overlay.querySelector('[data-cookie-action="reject-modal"]').addEventListener("click", function () {
-            finishChoice({ analytics: false, marketing: false }, true);
-        });
         overlay.querySelector('[data-cookie-action="save"]').addEventListener("click", function () {
             finishChoice({ analytics: analyticsInput.checked, marketing: marketingInput.checked }, true);
         });
